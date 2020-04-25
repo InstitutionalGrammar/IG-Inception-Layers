@@ -1,0 +1,17 @@
+import webanno.custom.IGCore as IGCore;
+
+IGCore {
+
+  /* Circumstance Taxonomy */
+  Component="Condition" -> Circumstance="(Method) Instrumental";
+  Component="Constraint" -> Circumstance="(Method) Instrumental";
+  Component="Attribute_Property" -> Circumstance="(Method) Instrumental";
+  Component="Object_Direct_Property" -> Circumstance="(Method) Instrumental";
+  Component="Object_Indirect_Property" -> Circumstance="(Method) Instrumental";
+  
+  /* Animacy */
+  Component="Attribute" -> Animacy="Animate";
+  Component="Object_Direct" -> Animacy="Inanimate";
+  Component="Object_Indirect" -> Animacy="Inanimate";
+  
+}

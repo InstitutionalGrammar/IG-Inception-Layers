@@ -1,0 +1,102 @@
+[ {
+  "name" : "webanno.custom.IGPolicyResourceElement",
+  "features" : [ {
+    "name" : "ResourceDescriptor",
+    "tag_set" : null,
+    "uiName" : "Resource Descriptor",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Textual description of resource (especially if no identifier exists).",
+    "project_name" : "IG Initial Validation",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+  }, {
+    "name" : "ResourceType",
+    "tag_set" : null,
+    "uiName" : "Resource Identifier",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Unique Resource Identifier for the annotated policy",
+    "project_name" : "IG Initial Validation",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+  }, {
+    "name" : "ResourceNature",
+    "tag_set" : {
+      "name" : "IG Reference Scopes",
+      "typeUiName" : null,
+      "description" : "Indicates reference scope",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "1 - Statement",
+        "tag_description" : "Refers to individual statement"
+      }, {
+        "tag_name" : "2 - Collection of Statements",
+        "tag_description" : "Refers to collection of statements"
+      }, {
+        "tag_name" : "3 - Section",
+        "tag_description" : "Refers to section"
+      }, {
+        "tag_name" : "4 - Act",
+        "tag_description" : "Refers to Act in entirety"
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Resource Type",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Type/Nature of Policy Resource (e.g., statement, collection, section, Act)",
+    "project_name" : "IG Initial Validation",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+  } ],
+  "uiName" : "IG Policy Resource",
+  "type" : "span",
+  "description" : "Indicates a policy resource in a given dataset by annotating the corresponding act, sections, or parts thereof.",
+  "enabled" : true,
+  "built_in" : false,
+  "readonly" : false,
+  "attach_type" : null,
+  "attach_feature" : null,
+  "allow_stacking" : true,
+  "cross_sentence" : true,
+  "show_hover" : true,
+  "anchoring_mode" : "TOKENS",
+  "overlap_mode" : "ANY_OVERLAP",
+  "validation_mode" : "ALWAYS",
+  "lock_to_token_offset" : false,
+  "multiple_tokens" : true,
+  "project_name" : "IG Initial Validation",
+  "linked_list_behavior" : false,
+  "on_click_javascript_action" : null
+} ]
