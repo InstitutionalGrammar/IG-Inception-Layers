@@ -1,0 +1,80 @@
+[ {
+  "name" : "webanno.custom.IGCheck",
+  "features" : [ {
+    "name" : "CodingConfidence",
+    "tag_set" : {
+      "name" : "IG Coding Confidence",
+      "typeUiName" : null,
+      "description" : "Specifies coding confidence levels",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "1 - Low",
+        "tag_description" : "Low confidence"
+      }, {
+        "tag_name" : "2 - Medium",
+        "tag_description" : "Medium confidence"
+      }, {
+        "tag_name" : "3 - High",
+        "tag_description" : "High confidence"
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Coding Confidence",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates the confidence of the coding",
+    "project_name" : "IG Initial Validation",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"1\",\"value\":\"1 - Low\"},{\"keyCombo\":\"2\",\"value\":\"2 - Medium\"},{\"keyCombo\":\"3\",\"value\":\"3 - High\"}]}"
+  }, {
+    "name" : "Comment",
+    "tag_set" : null,
+    "uiName" : "Comment",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Comment on the aspect to discuss in this coding",
+    "project_name" : "IG Initial Validation",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+  } ],
+  "uiName" : "IG Check Indication",
+  "type" : "span",
+  "description" : "Layer to flag statements or any parts thereof for review - consider this a signaling feature for earmarking aspects for discussion",
+  "enabled" : true,
+  "built_in" : false,
+  "readonly" : false,
+  "attach_type" : null,
+  "attach_feature" : null,
+  "allow_stacking" : true,
+  "cross_sentence" : true,
+  "show_hover" : true,
+  "anchoring_mode" : "TOKENS",
+  "overlap_mode" : "ANY_OVERLAP",
+  "validation_mode" : "ALWAYS",
+  "lock_to_token_offset" : false,
+  "multiple_tokens" : true,
+  "project_name" : "IG Initial Validation",
+  "linked_list_behavior" : false,
+  "on_click_javascript_action" : null
+} ]

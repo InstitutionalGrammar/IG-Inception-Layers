@@ -1,0 +1,161 @@
+[ {
+  "name" : "webanno.custom.IGElementRelationship",
+  "features" : [ {
+    "name" : "ElementRelationship",
+    "tag_set" : {
+      "name" : "IG Collection Relationships",
+      "typeUiName" : null,
+      "description" : "Collection Element Relationships to decompose collections into element and collection entities",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "AND Relationship",
+        "tag_description" : "Identifies elements as AND-combined"
+      }, {
+        "tag_name" : "OR Relationship",
+        "tag_description" : "Identifies elements as AND/OR-combined"
+      }, {
+        "tag_name" : "Parent-Child Relationship (Target is Parent)",
+        "tag_description" : "Identifies a parent-child relationship between elements, with the parent being the element defined or composed, and the child as a component."
+      }, {
+        "tag_name" : "XOR Relationship",
+        "tag_description" : "Identifies elements as XOR-combined"
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Element Relationship",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicate element relationship",
+    "project_name" : "IG Initial Validation",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND Relationship\"},{\"keyCombo\":\"o\",\"value\":\"OR Relationship\"},{\"keyCombo\":\"p\",\"value\":\"Parent-Child Relationship (Target is Parent)\"},{\"keyCombo\":\"x\",\"value\":\"XOR Relationship\"}]}"
+  }, {
+    "name" : "Exhaustive",
+    "tag_set" : null,
+    "uiName" : "Exhaustive",
+    "type" : "uima.cas.Boolean",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : true,
+    "description" : "Indicates that listing or collection is exhaustive (i.e., statement does not use terms that signal open-ended relationships, such as \"included\")",
+    "project_name" : "IG Initial Validation",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : null
+  }, {
+    "name" : "PrecedenceOrder",
+    "tag_set" : null,
+    "uiName" : "Precedence of Combinations",
+    "type" : "uima.cas.Integer",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates precedence for a specific element relationship. Lower values imply lower precedence/priority.",
+    "project_name" : "IG Initial Validation",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"limited\":true,\"minimum\":1,\"maximum\":99,\"editorType\":\"SPINNER\"}"
+  } ],
+  "uiName" : "IG Collection Relationship",
+  "type" : "relation",
+  "description" : "Indicates logical relationship of collection elements",
+  "enabled" : true,
+  "built_in" : false,
+  "readonly" : false,
+  "attach_type" : {
+    "name" : "webanno.custom.IGElement"
+  },
+  "attach_feature" : null,
+  "allow_stacking" : true,
+  "cross_sentence" : true,
+  "show_hover" : true,
+  "anchoring_mode" : "TOKENS",
+  "overlap_mode" : "ANY_OVERLAP",
+  "validation_mode" : "ALWAYS",
+  "lock_to_token_offset" : false,
+  "multiple_tokens" : true,
+  "project_name" : "IG Initial Validation",
+  "linked_list_behavior" : false,
+  "on_click_javascript_action" : null
+}, {
+  "name" : "webanno.custom.IGElement",
+  "features" : [ {
+    "name" : "ElementType",
+    "tag_set" : {
+      "name" : "IG Collection Element Type",
+      "typeUiName" : null,
+      "description" : "Identifies element types of collection items",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "Action",
+        "tag_description" : "Identifies element type as action"
+      }, {
+        "tag_name" : "Object",
+        "tag_description" : "Identifies element type as object"
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Element Type",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Type of element annotated (e.g., object, verb)",
+    "project_name" : "IG Initial Validation",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"Action\"},{\"keyCombo\":\"o\",\"value\":\"Object\"}]}"
+  } ],
+  "uiName" : "IG Collection",
+  "type" : "span",
+  "description" : "Identifies collection elements for lists and compositions",
+  "enabled" : true,
+  "built_in" : false,
+  "readonly" : false,
+  "attach_type" : null,
+  "attach_feature" : null,
+  "allow_stacking" : true,
+  "cross_sentence" : true,
+  "show_hover" : true,
+  "anchoring_mode" : "TOKENS",
+  "overlap_mode" : "ANY_OVERLAP",
+  "validation_mode" : "ALWAYS",
+  "lock_to_token_offset" : false,
+  "multiple_tokens" : true,
+  "project_name" : "IG Initial Validation",
+  "linked_list_behavior" : false,
+  "on_click_javascript_action" : null
+} ]
