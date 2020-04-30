@@ -3,11 +3,11 @@ import webanno.custom.IGCore as IGCore;
 IGCore {
 
   /* Circumstance Taxonomy */
-  Component="Condition" -> Circumstance="(Method) Instrumental";
-  Component="Constraint" -> Circumstance="(Method) Instrumental";
-  Component="Attribute_Property" -> Circumstance="(Method) Instrumental";
-  Component="Object_Direct_Property" -> Circumstance="(Method) Instrumental";
-  Component="Object_Indirect_Property" -> Circumstance="(Method) Instrumental";
+  Component="Condition" -> Circumstance="(Spatial) Direction";
+  Component="Constraint" -> Circumstance="(Spatial) Direction";
+  Component="Attribute_Property" -> Circumstance="(Spatial) Direction";
+  Component="Object_Direct_Property" -> Circumstance="(Spatial) Direction";
+  Component="Object_Indirect_Property" -> Circumstance="(Spatial) Direction";
   
   /* Animacy */
   Component="Attribute" -> Animacy="Animate";

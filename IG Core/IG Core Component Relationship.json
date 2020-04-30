@@ -190,12 +190,6 @@
       "type_name" : null,
       "type_description" : null,
       "tags" : [ {
-        "tag_name" : "(Method) Instrumental",
-        "tag_description" : "Instrument - Artefact as method (e.g., car)"
-      }, {
-        "tag_name" : "(Method) Means",
-        "tag_description" : "Means - Action as method (e.g., handshake)"
-      }, {
         "tag_name" : "(Spatial) Direction",
         "tag_description" : "Direction - References to directions, inclusion of intermediary locations (e.g., “via”)"
       }, {
@@ -226,6 +220,9 @@
         "tag_name" : "Exception",
         "tag_description" : "Exception - Expression of exception to general rule (e.g., \"unless ...\")"
       }, {
+        "tag_name" : "Method",
+        "tag_description" : "Method - Means (e.g., artifact, tool) mediating activity"
+      }, {
         "tag_name" : "Observed Effect/Outcome",
         "tag_description" : "Conditions/Constraints describing the outcome or effect of an aim by an actor involved in the action situation (e.g., \"Upon observing non-compliance, ...\")."
       }, {
@@ -233,7 +230,10 @@
         "tag_description" : "Origin - Identifies the context as input, e.g., based on its origin."
       }, {
         "tag_name" : "Procedural Order",
-        "tag_description" : "Procedural - Conditions/Constraints associated with explicit or implied execution order, i.e., performing one action depends on completion of another."
+        "tag_description" : "Procedural Order - Context specifications associated with explicit or implied execution order, i.e., performing one action depends on completion of another"
+      }, {
+        "tag_name" : "Process",
+        "tag_description" : "Process - Reference to process specification an action needs to comply with or otherwise relates to"
       }, {
         "tag_name" : "Purpose/Function",
         "tag_description" : "Purpose/Function - Conditions/Constraints describing the purpose or intent of an aim"
@@ -314,7 +314,7 @@
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"A\",\"value\":\"Attribute\"},{\"keyCombo\":\"I\",\"value\":\"Aim\"},{\"keyCombo\":\"d\",\"value\":\"Deontic\"},{\"keyCombo\":\"c\",\"value\":\"Condition\"},{\"keyCombo\":\"q\",\"value\":\"Constraint\"},{\"keyCombo\":\"B\",\"value\":\"Object_Direct\"},{\"keyCombo\":\"n\",\"value\":\"Object_Indirect\"},{\"keyCombo\":\"h\",\"value\":\"Object_Direct_Property\"},{\"keyCombo\":\"j\",\"value\":\"Object_Indirect_Property\"},{\"keyCombo\":\"w\",\"value\":\"Attribute_Property\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"A\",\"value\":\"Attribute\"},{\"keyCombo\":\"I\",\"value\":\"Aim\"},{\"keyCombo\":\"d\",\"value\":\"Deontic\"},{\"keyCombo\":\"c\",\"value\":\"Condition\"},{\"keyCombo\":\"B\",\"value\":\"Object_Direct\"},{\"keyCombo\":\"n\",\"value\":\"Object_Indirect\"},{\"keyCombo\":\"h\",\"value\":\"Object_Direct_Property\"},{\"keyCombo\":\"j\",\"value\":\"Object_Indirect_Property\"},{\"keyCombo\":\"w\",\"value\":\"Attribute_Property\"},{\"keyCombo\":\"x\",\"value\":\"Constraint\"}]}"
   }, {
     "name" : "InstitutionalStatement",
     "tag_set" : null,
