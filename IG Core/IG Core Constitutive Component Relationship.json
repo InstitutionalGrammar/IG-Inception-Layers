@@ -1,5 +1,5 @@
 [ {
-  "name" : "webanno.custom.IGComponentRelationship",
+  "name" : "webanno.custom.IGCoreConstitutiveComponentRelationship",
   "features" : [ {
     "name" : "Exhaustive",
     "tag_set" : null,
@@ -102,18 +102,18 @@
     "link_type_target_feature_name" : null,
     "traits" : null
   } ],
-  "uiName" : "IG Core Component Relationship",
+  "uiName" : "IG Core Constitutive Component Relationship",
   "type" : "relation",
-  "description" : "Captures logical relationships between institutional grammar components of the same type (e.g., multiple aims).",
+  "description" : "Captures logical relationships between institutional grammar components of the same type (e.g., multiple constituents).",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,
   "attach_type" : {
-    "name" : "webanno.custom.IGCore"
+    "name" : "webanno.custom.IGCoreConstitutiveStatement"
   },
   "attach_feature" : null,
   "allow_stacking" : true,
-  "cross_sentence" : false,
+  "cross_sentence" : true,
   "show_hover" : true,
   "anchoring_mode" : "TOKENS",
   "overlap_mode" : "ANY_OVERLAP",
@@ -124,62 +124,8 @@
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 }, {
-  "name" : "webanno.custom.IGCore",
+  "name" : "webanno.custom.IGCoreConstitutiveStatement",
   "features" : [ {
-    "name" : "Additionallabels",
-    "tag_set" : null,
-    "uiName" : "Additional Label(s)",
-    "type" : "uima.cas.String",
-    "enabled" : true,
-    "visible" : true,
-    "include_in_hover" : false,
-    "required" : false,
-    "remember" : false,
-    "hideUnconstraintFeature" : false,
-    "description" : "Identifies additional custom labels. Separate labels by |.",
-    "project_name" : "IG Initial Validation",
-    "multi_value_mode" : "NONE",
-    "link_mode" : "NONE",
-    "link_type_name" : null,
-    "link_type_role_feature_name" : null,
-    "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":true,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
-  }, {
-    "name" : "Animacy",
-    "tag_set" : {
-      "name" : "IG Animacy",
-      "typeUiName" : null,
-      "description" : "Tags indicating animacy",
-      "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
-      "tags" : [ {
-        "tag_name" : "animate",
-        "tag_description" : "Indicates animate entity"
-      }, {
-        "tag_name" : "inanimate",
-        "tag_description" : "Indicates inanimate entity"
-      } ],
-      "create_tag" : true
-    },
-    "uiName" : "Animacy",
-    "type" : "uima.cas.String",
-    "enabled" : true,
-    "visible" : true,
-    "include_in_hover" : false,
-    "required" : false,
-    "remember" : false,
-    "hideUnconstraintFeature" : true,
-    "description" : "Animacy annotation for specific component types",
-    "project_name" : "IG Initial Validation",
-    "multi_value_mode" : "NONE",
-    "link_mode" : "NONE",
-    "link_type_name" : null,
-    "link_type_role_feature_name" : null,
-    "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
-  }, {
     "name" : "Circumstance",
     "tag_set" : {
       "name" : "IG Circumstance Taxonomy",
@@ -248,7 +194,7 @@
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : true,
-    "description" : "Identifies contextual circumstances types",
+    "description" : "Characterizes the circumstance of context components in constitutive statements",
     "project_name" : "IG Initial Validation",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
@@ -259,43 +205,37 @@
   }, {
     "name" : "Component",
     "tag_set" : {
-      "name" : "IG Core",
+      "name" : "IG Core Constitutive Components",
       "typeUiName" : null,
-      "description" : "Institutional Grammar Component Annotations",
+      "description" : "IG Core Component Annotations for Constitutive Components",
       "language" : null,
       "type" : null,
       "type_name" : null,
       "type_description" : null,
       "tags" : [ {
-        "tag_name" : "Aim",
-        "tag_description" : "The goal or action of the statement assigned to the statement Attribute."
+        "tag_name" : "Constituted Entity",
+        "tag_description" : "Entity that is defined or modified by constitutive statement"
       }, {
-        "tag_name" : "Attribute",
-        "tag_description" : "An actor (individual or corporate) that carries out, or is expected to carry out, the action (i.e., Aim) of the statement. The Attribute may also contain descriptors of the actor."
+        "tag_name" : "Constituted Entity Property",
+        "tag_description" : "Property associated with constituted entity"
       }, {
-        "tag_name" : "Attribute_Property",
-        "tag_description" : "Attribute Properties"
+        "tag_name" : "Constitutive Effect",
+        "tag_description" : "Indicates an effect (e.g., modification of the environment/action situation) emanating from constitutive function and/or constituted entity"
       }, {
-        "tag_name" : "Condition",
-        "tag_description" : "Conditions instantiate the Aim indicated in an institutional statement."
+        "tag_name" : "Constitutive Function",
+        "tag_description" : "Function relationship between constituent and constituted entity"
       }, {
-        "tag_name" : "Constraint",
-        "tag_description" : "Constraints qualify the Aim indicated in an institutional statement."
+        "tag_name" : "Context",
+        "tag_description" : "Context in which the constitutive function applies"
       }, {
-        "tag_name" : "Deontic",
-        "tag_description" : "A prescriptive operator that describes whether the Aim of an institutional statement is permitted (e.g., may), obliged (e.g., shall, must), or forbidden (e.g., shall not, must not)."
+        "tag_name" : "Context Property",
+        "tag_description" : "Property of the context"
       }, {
-        "tag_name" : "Object_Direct",
-        "tag_description" : "Direct objects are receiver of the action captured in the Aim"
+        "tag_name" : "Function Parameter",
+        "tag_description" : "Entity/Descriptor/Parameters capturing related or constituent components for input to constitutive function for the characterization of the constituted entity. It is polymorphic in nature and dependent on the applied constitutive function."
       }, {
-        "tag_name" : "Object_Direct_Property",
-        "tag_description" : "Direct object properties"
-      }, {
-        "tag_name" : "Object_Indirect",
-        "tag_description" : "Indirect objects are objects that are affected or targeted by the application of the Aim to direct objects."
-      }, {
-        "tag_name" : "Object_Indirect_Property",
-        "tag_description" : "Indirect object properties"
+        "tag_name" : "Function Parameter Property",
+        "tag_description" : "Property of function parameter (e.g., object property if function parameter is object)"
       } ],
       "create_tag" : true
     },
@@ -307,64 +247,60 @@
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
-    "description" : "Identifies component type",
+    "description" : "Constitutive Statement Component Type",
     "project_name" : "IG Initial Validation",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"A\",\"value\":\"Attribute\"},{\"keyCombo\":\"I\",\"value\":\"Aim\"},{\"keyCombo\":\"d\",\"value\":\"Deontic\"},{\"keyCombo\":\"c\",\"value\":\"Condition\"},{\"keyCombo\":\"B\",\"value\":\"Object_Direct\"},{\"keyCombo\":\"n\",\"value\":\"Object_Indirect\"},{\"keyCombo\":\"h\",\"value\":\"Object_Direct_Property\"},{\"keyCombo\":\"j\",\"value\":\"Object_Indirect_Property\"},{\"keyCombo\":\"w\",\"value\":\"Attribute_Property\"},{\"keyCombo\":\"x\",\"value\":\"Constraint\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"e\",\"value\":\"Constituted Entity\"},{\"keyCombo\":\"f\",\"value\":\"Constitutive Function\"},{\"keyCombo\":\"g\",\"value\":\"Constituent\"},{\"keyCombo\":\"c\",\"value\":\"Context (executional)\"},{\"keyCombo\":\"v\",\"value\":\"Context (affected)\"}]}"
   }, {
-    "name" : "InstitutionalStatement",
-    "tag_set" : null,
-    "uiName" : "Embeds Institutional Statement",
-    "type" : "uima.cas.Boolean",
-    "enabled" : true,
-    "visible" : true,
-    "include_in_hover" : false,
-    "required" : false,
-    "remember" : false,
-    "hideUnconstraintFeature" : false,
-    "description" : "Indicates whether the component is or embeds an institutional statement in its own right.",
-    "project_name" : "IG Initial Validation",
-    "multi_value_mode" : "NONE",
-    "link_mode" : "NONE",
-    "link_type_name" : null,
-    "link_type_role_feature_name" : null,
-    "link_type_target_feature_name" : null,
-    "traits" : null
-  }, {
-    "name" : "Impliesnegation",
-    "tag_set" : null,
-    "uiName" : "Implies Negation",
-    "type" : "uima.cas.Boolean",
-    "enabled" : true,
-    "visible" : true,
-    "include_in_hover" : false,
-    "required" : false,
-    "remember" : false,
-    "hideUnconstraintFeature" : false,
-    "description" : "Indicates whether component expression implies negation (e.g., must NOT; will NOT issue license)",
-    "project_name" : "IG Initial Validation",
-    "multi_value_mode" : "NONE",
-    "link_mode" : "NONE",
-    "link_type_name" : null,
-    "link_type_role_feature_name" : null,
-    "link_type_target_feature_name" : null,
-    "traits" : null
-  }, {
-    "name" : "Inferredcomponentvalue",
-    "tag_set" : null,
-    "uiName" : "Inferred Component Value",
+    "name" : "ConstitutiveFunctionType",
+    "tag_set" : {
+      "name" : "IG Constitutive Functions",
+      "typeUiName" : null,
+      "description" : "Constitutive functions used in constitutive statements",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "(Lifecycle) Creation",
+        "tag_description" : "Annotates the creation of the constituted entity"
+      }, {
+        "tag_name" : "(Lifecycle) Termination",
+        "tag_description" : "Indicates the termination of the constituted entity"
+      }, {
+        "tag_name" : "Ascription",
+        "tag_description" : "Ascribes an entity characteristics or features"
+      }, {
+        "tag_name" : "Composition",
+        "tag_description" : "Signals that the constituted entity is constitutively composed of the constituents."
+      }, {
+        "tag_name" : "Definition",
+        "tag_description" : "Defines an entity/object/policy intensionally; common reflection as \"counts as\""
+      }, {
+        "tag_name" : "Hierarchy",
+        "tag_description" : "Signals the embedding of the constituted entity in a hierarchical structure (e.g., organisation)"
+      }, {
+        "tag_name" : "Policy Relationship",
+        "tag_description" : "Indicates how this policy is related to another policy"
+      }, {
+        "tag_name" : "Purpose/Intent",
+        "tag_description" : "Signals the specification of a purpose or intent associated with the constituted entity"
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Constitutive Function Type",
     "type" : "uima.cas.String",
     "enabled" : true,
     "visible" : true,
     "include_in_hover" : false,
     "required" : false,
     "remember" : false,
-    "hideUnconstraintFeature" : false,
-    "description" : "If the component value is largely implicit (e.g., \"it\"), this field is filled with the explicit content the component resolves to (e.g., \"the author\").",
+    "hideUnconstraintFeature" : true,
+    "description" : "Indicates type of constitutive function",
     "project_name" : "IG Initial Validation",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
@@ -373,28 +309,100 @@
     "link_type_target_feature_name" : null,
     "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
   }, {
-    "name" : "PhysicalEntity",
-    "tag_set" : null,
-    "uiName" : "Physical Entity",
-    "type" : "uima.cas.Boolean",
+    "name" : "Describespolicynotentity",
+    "tag_set" : {
+      "name" : "IG Constitutive Policy vs Entity",
+      "typeUiName" : null,
+      "description" : "Includes options for annotating constituted entities as self-referential with respect to the policy characterized, an external policy (i.e., a policy outside of the regulation or initiated in the context of the regulation), or an entity/object that is affected by the regulation, respectively.",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "Entity",
+        "tag_description" : "Indicates that the constituted entity is an entity/object"
+      }, {
+        "tag_name" : "Policy (external)",
+        "tag_description" : "Indicates that the constituted entity is a policy, but not the policy of the encoded document itself (i.e., is not self-referential)."
+      }, {
+        "tag_name" : "Policy (self-referential)",
+        "tag_description" : "Indicates that the constituted entity is the policy itself (i.e., is self-referential)."
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Describes policy (not entity)",
+    "type" : "uima.cas.String",
     "enabled" : true,
     "visible" : true,
     "include_in_hover" : false,
     "required" : false,
     "remember" : false,
-    "hideUnconstraintFeature" : false,
-    "description" : "Indicates whether the entity is physical (e.g., actor, object) or non-physical (e.g., thought, belief)",
+    "hideUnconstraintFeature" : true,
+    "description" : "Indicates whether this statement describes the policy it is embedded in (self-referential), as opposed to an entity/object, where the entity/object may also be a(nother) policy.",
     "project_name" : "IG Initial Validation",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : null
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"e\",\"value\":\"Entity\"},{\"keyCombo\":\"p\",\"value\":\"Policy (self-referential)\"},{\"keyCombo\":\"x\",\"value\":\"Policy (external)\"}]}"
+  }, {
+    "name" : "PolicyRelationship",
+    "tag_set" : {
+      "name" : "IG Policy Relationships",
+      "typeUiName" : null,
+      "description" : "Characterize forms of policy relationships based on directionality",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "Policy in function parameter amends",
+        "tag_description" : "Policy of concern is amended by policy referred to in function parameter"
+      }, {
+        "tag_name" : "Policy in function parameter is added",
+        "tag_description" : "Policy of function parameter is added to policy of concern"
+      }, {
+        "tag_name" : "Policy in function parameter is removed",
+        "tag_description" : "Policy in function parameter is removed from policy of concern"
+      }, {
+        "tag_name" : "Policy in function parameter substitutes",
+        "tag_description" : "Policy in function parameter substitutes policy of concern"
+      }, {
+        "tag_name" : "Policy of concern amends",
+        "tag_description" : "Policy of concern amends policy referred to in function parameter"
+      }, {
+        "tag_name" : "Policy of concern is added",
+        "tag_description" : "Policy of concern is added to policy referred to in function parameter"
+      }, {
+        "tag_name" : "Policy of concern is removed",
+        "tag_description" : "Policy of concern is removed from policy referred to in function parameter"
+      }, {
+        "tag_name" : "Policy of concern substitutes",
+        "tag_description" : "Policy of concern substitutes policy referred to in function parameter"
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Policy Relationship",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : true,
+    "description" : "Describes policy relationship between policy referred to in constituted entity and policy otherwise referred to",
+    "project_name" : "IG Initial Validation",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
   } ],
-  "uiName" : "IG Core",
+  "uiName" : "IG Core Constitutive Syntax",
   "type" : "span",
-  "description" : "Identifies institutional statement components",
+  "description" : "Identifies institutional statement components for constitutive statements",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,
