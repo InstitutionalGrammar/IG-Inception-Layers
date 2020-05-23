@@ -6,7 +6,13 @@ Institutional Grammar Layers for Inception Annotation Platform
 
 ## Content
 
-This repository contains [Inception](https://inception-project.github.io/) Annotation Layers for the IG Core specification of the Institutional Grammar, alongside selected additional features.
+This repository contains [Inception](https://inception-project.github.io/) Annotation Layers for the IG Core specification of the Institutional Grammar, alongside selected additional features. 
+
+### Download 
+
+Please check the [Releases](../../releases) page to download any of the of the IG-Inception layers releases. All releases will be retained so as to maintain long-term compability with and accessibility of encoded datasets. Ensure that you document the specific release used during encoding.
+
+### Overview
 
 The annotation layers are provided as json files that have to be imported into Inception projects. Layer files that represent relationships amongst layer annotations include the associated layer in addition to the annotation layer. Selected layer files thus expand into multiple layers when imported into Inception as introduced in the following.
 
