@@ -1,5 +1,5 @@
 [ {
-  "name" : "webanno.custom.IGDocumentReferenceRelationship",
+  "name" : "webanno.custom.IGPolicyResourceReferenceRelationship",
   "features" : [ {
     "name" : "Exhaustive",
     "tag_set" : null,
@@ -12,7 +12,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates whether the logical relationship exhaustively characterises all alternatives (e.g., in conjunction with other linked relationships), or whether it is open-ended.",
-    "project_name" : "IG Initial Validation",
+    "project_name" : "IG Layer Project",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -56,7 +56,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates the logical relationship between the references.",
-    "project_name" : "IG Initial Validation",
+    "project_name" : "IG Layer Project",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -75,7 +75,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates the precedence of this relationship among other relationships these elements might have. Lower values imply lower precedence/priority.",
-    "project_name" : "IG Initial Validation",
+    "project_name" : "IG Layer Project",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -90,7 +90,7 @@
   "built_in" : false,
   "readonly" : false,
   "attach_type" : {
-    "name" : "webanno.custom.IGDocumentReference"
+    "name" : "webanno.custom.IGPolicyResourceReference"
   },
   "attach_feature" : null,
   "allow_stacking" : true,
@@ -101,11 +101,11 @@
   "validation_mode" : "ALWAYS",
   "lock_to_token_offset" : false,
   "multiple_tokens" : true,
-  "project_name" : "IG Initial Validation",
+  "project_name" : "IG Layer Project",
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 }, {
-  "name" : "webanno.custom.IGDocumentReference",
+  "name" : "webanno.custom.IGPolicyResourceReference",
   "features" : [ {
     "name" : "ReferenceLink",
     "tag_set" : null,
@@ -118,7 +118,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "As an alternative (or in addition) to the explicit reference to a target (e.g., textual descriptor of policy referred to), a direct link to an annotated policy resource can be provided here.",
-    "project_name" : "IG Initial Validation",
+    "project_name" : "IG Layer Project",
     "multi_value_mode" : "ARRAY",
     "link_mode" : "WITH_ROLE",
     "link_type_name" : "webanno.custom.IGDocumentReferenceReferenceLinkLink",
@@ -159,7 +159,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Scope of document references",
-    "project_name" : "IG Initial Validation",
+    "project_name" : "IG Layer Project",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -178,7 +178,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Identifies target of document references",
-    "project_name" : "IG Initial Validation",
+    "project_name" : "IG Layer Project",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -202,7 +202,7 @@
   "validation_mode" : "ALWAYS",
   "lock_to_token_offset" : false,
   "multiple_tokens" : true,
-  "project_name" : "IG Initial Validation",
+  "project_name" : "IG Layer Project",
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 } ]

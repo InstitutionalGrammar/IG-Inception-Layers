@@ -2,7 +2,7 @@
 
 Institutional Grammar Layers for Inception Annotation Platform
 
-**Note: This project is under development and should not be considered production ready!**
+**Note: This project is under development and currently undergoing evaluation.**
 
 ## Content
 
@@ -17,10 +17,11 @@ Please check the [Releases](../../releases) page to download any of the of the I
 The annotation layers are provided as json files that have to be imported into Inception projects. Layer files that represent relationships amongst layer annotations include the associated layer in addition to the annotation layer. Selected layer files thus expand into multiple layers when imported into Inception as introduced in the following.
 
 The layer files included in this release are the following (where containing multiple layers, those are listed explicitly):
- * *IG Check Indication* - this layer allows the flagging of annotations in preparation for coding or analysis discussions
+ * *IG Coding Review Indication* - this layer allows the flagging of annotations in preparation for coding or analysis discussions
  * IG Collection Relationship - this layer allows the representation of collection constructs by annotation. This file contains the following layers:
    * *IG Collection* (containing collection elements and characterization by type)
    * *IG Collection Relationship* (containing logical relationships amongst elements)
+ * IG Complex Data Structure Relationship - this layer provides a schema for the decomposition of complex data structures.
  * IG Core Constitutive Component Relationship - this layer contains the IG Core constitutive component specifications, alongside additional Context taxonomies. This file contains the following layers:
    * *IG Core Constitutive Syntax* (containing syntactic component annotations for constitutive institutional statements, along with relevant taxonomies)
    * *IG Core Constitutive Component Relationship* (containing logical relationship annotations amongst institutional grammar components)
@@ -35,15 +36,18 @@ The layer files included in this release are the following (where containing mul
    * *IG Policy Resource Reference Relationship* (containing annotation of logical relationships amongst references to policy resources)
  * *IG Policy Resource* - this layer facilitates the annotation of policy resources
 
-In addition to layers, the package contains constraints for the UI configuration:
+In addition to layers, the package contains constraints for the UI configuration and Coding Guidelines:
  * *IGCoreConstraints.txt* - Context-dependent UI layout for Context components and properties of constitutive and regulatory statements
+ * *IGLayersCodingGuidelines.txt* - Coding guidelines for the general Institutional Grammar annotation in Inception
 
 ## Contact
 
-Christopher Frantz (cf@christopherfrantz.org)
+Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
+ * IG-Inception v0.2.0 (15/06/2020, C. Frantz)
+   * Refined and completed full constitutive syntax layer, reviewed underlying naming schema, added coding guidelines
  * IG-Inception v0.1.2 (02/05/2020, C. Frantz)
    * Added constitutive syntax layer (components, corresponding tagsets, conditional annotations); renamed 'IG Core' Layer to 'IG Core Regulatory Syntax'
    * Added policy relationship specification

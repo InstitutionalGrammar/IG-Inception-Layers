@@ -1,5 +1,5 @@
-import webanno.custom.IGCore as IGCoreRegulatory;
-import webanno.custom.IGCoreConstitutiveStatement as IGCoreConstitutive;
+import webanno.custom.IGCoreRegulatorySyntax as IGCoreRegulatory;
+import webanno.custom.IGCoreConstitutiveSyntax as IGCoreConstitutive;
 
 IGCoreRegulatory {
 
@@ -24,17 +24,17 @@ IGCoreConstitutive {
   Component="Constituted Entity Property" -> Circumstance="(Spatial) Direction";
   
   /* Component-specific options for constitutive functions */
-  Component="Constitutive Function" -> ConstitutiveFunctionType="Definition";
+  Component="Constitutive Function" -> ConstitutiveFunctionType="(Definition) Definition";
   
   /* Policy Relationship Directionality */
   ConstitutiveFunctionType="Policy Relationship" -> PolicyRelationship="Policy of concern amends";
   
   /* Component-specific options for constitutive functions */
-  Component="Function Parameter" -> Circumstance="(Spatial) Direction";
-  Component="Function Parameter Property" -> Circumstance="(Spatial) Direction";
+  Component="Constituting Property" -> Circumstance="(Spatial) Direction";
+  Component="Constituting Property Property" -> Circumstance="(Spatial) Direction";
   
   /* Circumstance Taxonomy for Context */
-  Component="Context" -> Circumstance="(Spatial) Direction";
-  Component="Context Property" -> Circumstance="(Spatial) Direction";
+  Component="Context - Activation Conditions" -> Circumstance="(Spatial) Direction";
+  Component="Context - Execution Constraints" -> Circumstance="(Spatial) Direction";
   
 }
