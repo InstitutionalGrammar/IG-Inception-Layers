@@ -10,11 +10,11 @@ This repository contains [Inception](https://inception-project.github.io/) Annot
 
 ### Download 
 
-Please check the [Releases](../../releases) page to download any of the of the IG-Inception layers releases. All releases will be retained so as to maintain long-term compability with and accessibility of encoded datasets. Ensure that you document the specific release used during encoding.
+Please refer to the [Releases](../../releases) page to download any of the IG-Inception layers releases. All releases will be retained so as to maintain long-term compability with and accessibility of encoded datasets. Ensure that you document the specific release used during encoding alongside your dataset.
 
 ### Overview
 
-The annotation layers are provided as json files that have to be imported into Inception projects. Layer files that represent relationships amongst layer annotations include the associated layer in addition to the annotation layer. Selected layer files thus expand into multiple layers when imported into Inception as introduced in the following.
+The annotation layers are provided as json files that have to be imported into Inception projects. Layer files that represent relationships amongst layer annotations include the associated layer in addition to the annotation layer. Selected layer files thus expand into multiple layers when imported into Inception as introduced in the following. The import process is described in the following [video](https://youtu.be/wnXzSNxmLec).
 
 The layer files included in this release are the following (where containing multiple layers, those are listed explicitly):
  * *IG Coding Review Indication* - this layer allows the flagging of annotations in preparation for coding or analysis discussions
