@@ -6,13 +6,13 @@
     "uiName" : "Exhaustive",
     "type" : "uima.cas.Boolean",
     "enabled" : true,
-    "visible" : true,
+    "visible" : false,
     "include_in_hover" : false,
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates that relationships are exhaustive (i.e., statement does not use terms that signal open-ended relationships, such as \"including\", but lists all possible alternatives)",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -31,19 +31,19 @@
       "type_description" : null,
       "tags" : [ {
         "tag_name" : "AND",
-        "tag_description" : "Indicates AND relationship, i.e., conjunction. The relationship is undirected."
+        "tag_description" : "Indicates AND relationship, i.e., conjunction of components. The relationship is undirected."
       }, {
         "tag_name" : "AND NOT",
         "tag_description" : "Describes a combination of statements, where the occurrence of the action specified in the first statement is combined with the non-occurrence of the action specified in the second statement. The relationship is directed; the target is the non-occurring action statement."
       }, {
         "tag_name" : "AND/OR",
-        "tag_description" : "Indicates AND/OR relationship, i.e., inclusive disjunction.  The relationship is undirected."
+        "tag_description" : "Indicates AND/OR relationship (OR) in which both components may apply, or either one of those, i.e., an inclusive disjunction. The relationship is undirected."
       }, {
-        "tag_name" : "NEITHER NOR",
-        "tag_description" : "Describes a combination of statements, where the non-occurrence of the action specified in the first statement is combined with the non-occurrence of the action specified in the second statement. The relationship is undirected."
+        "tag_name" : "NOR",
+        "tag_description" : "Describes a NEITHER-NOR (NOR) relationship of components, where the non-occurrence of the first component is combined with the non-occurrence of the second component of the same type. The relationship is undirected."
       }, {
         "tag_name" : "XOR",
-        "tag_description" : "Indicates XOR relationship, i.e., exclusive disjunction. The relationship is undirected."
+        "tag_description" : "Indicates an EITHER-OR (XOR) relationship, i.e., exclusive disjunction. The relationship is undirected."
       } ],
       "create_tag" : true
     },
@@ -56,13 +56,13 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates type of logical relationship amongst components",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND\"},{\"keyCombo\":\"o\",\"value\":\"AND/OR\"},{\"keyCombo\":\"x\",\"value\":\"XOR\"},{\"keyCombo\":\"m\",\"value\":\"AND NOT\"},{\"keyCombo\":\"n\",\"value\":\"NEITHER NOR\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND\"},{\"keyCombo\":\"o\",\"value\":\"AND/OR\"},{\"keyCombo\":\"x\",\"value\":\"XOR\"},{\"keyCombo\":\"m\",\"value\":\"AND NOT\"},{\"keyCombo\":\"N\",\"value\":\"NOR\"}]}"
   }, {
     "name" : "PrecedenceofComponentCombinations",
     "tag_set" : null,
@@ -75,7 +75,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates precedence among component relationships. Lower values imply lower precedence/priority.",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -88,13 +88,13 @@
     "uiName" : "Separable",
     "type" : "uima.cas.Boolean",
     "enabled" : true,
-    "visible" : true,
+    "visible" : false,
     "include_in_hover" : false,
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates whether logically-linked elements can be separated for analytical purposes, or whether they are only used in conjunction (e.g., fish and chips, Smith and Sons).",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -120,7 +120,7 @@
   "validation_mode" : "ALWAYS",
   "lock_to_token_offset" : false,
   "multiple_tokens" : true,
-  "project_name" : "IG Layer Project",
+  "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 }, {
@@ -136,8 +136,8 @@
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
-    "description" : "Identifies additional custom labels. Separate labels by |.",
-    "project_name" : "IG Layer Project",
+    "description" : "Identifies additional custom labels. Signal labels as key-value pairs (e.g., key=value) and separate multiple labels by | (e.g., key1=value|key2=value).",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -150,13 +150,13 @@
     "uiName" : "Animacy",
     "type" : "uima.cas.Boolean",
     "enabled" : true,
-    "visible" : true,
+    "visible" : false,
     "include_in_hover" : false,
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Animacy annotation for specific component types",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -233,7 +233,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : true,
     "description" : "Characterizes the circumstance of context components in constitutive statements",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -251,29 +251,29 @@
       "type_name" : null,
       "type_description" : null,
       "tags" : [ {
-        "tag_name" : "Constituted Entity",
-        "tag_description" : "Entity that is defined or modified by constitutive statement"
-      }, {
-        "tag_name" : "Constituted Entity Property",
-        "tag_description" : "Property associated with constituted entity"
-      }, {
-        "tag_name" : "Constituting Property",
-        "tag_description" : "Constituting Properties capture related or constituent properties that are linked to the constituted entity via the constituting function. It is polymorphic in nature and dependent on the applied constitutive function."
-      }, {
-        "tag_name" : "Constituting Property Property",
-        "tag_description" : "Property of the Constituting Property (e.g., object property if constituting property is an object)"
-      }, {
-        "tag_name" : "Constitutive Function",
-        "tag_description" : "Functionally constitutes a Constituted Entity (with or without reference to constituting properties)"
-      }, {
-        "tag_name" : "Context - Activation Conditions",
+        "tag_name" : "(Cac) Activation Conditions",
         "tag_description" : "Conditions describe circumstances under which constitutive statements apply"
       }, {
-        "tag_name" : "Context - Execution Constraints",
-        "tag_description" : "Execution constraints describe qualifications of the constituting function"
+        "tag_name" : "(Cex) Execution Constraints",
+        "tag_description" : "Execution constraints describe qualifications of the constitutive function or offer further contextual characterization."
       }, {
-        "tag_name" : "Deontic",
-        "tag_description" : "A prescriptive operator that describes whether the Aim of an institutional statement is permitted (e.g., may), obliged (e.g., shall, must), or forbidden (e.g., shall not, must not)."
+        "tag_name" : "(D) Deontic",
+        "tag_description" : "A prescriptive operator that describes whether the Aim (for regulative statements) of an institutional statement is permitted (e.g., may), obliged (e.g., shall, must), or forbidden (e.g., shall not, must not). For constitutive statements, the deontic parameterizes the constitutive function."
+      }, {
+        "tag_name" : "(E) Constituted Entity",
+        "tag_description" : "Entity that is defined or modified by constitutive statement"
+      }, {
+        "tag_name" : "(E, prop) Constituted Entity Property",
+        "tag_description" : "Property associated with constituted entity"
+      }, {
+        "tag_name" : "(F) Constitutive Function",
+        "tag_description" : "Functionally constitutes a Constituted Entity (with or without reference to constituting properties)"
+      }, {
+        "tag_name" : "(P) Constituting Property",
+        "tag_description" : "Constituting Properties capture related or constituent properties that are linked to the constituted entity via the constituting function. It is polymorphic in nature and dependent on the applied constitutive function."
+      }, {
+        "tag_name" : "(P, prop) Constituting Property Property",
+        "tag_description" : "Property of the Constituting Property (e.g., object property if constituting property is an object)"
       } ],
       "create_tag" : true
     },
@@ -286,13 +286,13 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Constitutive Statement Component Type",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"e\",\"value\":\"Constituted Entity\"},{\"keyCombo\":\"p\",\"value\":\"Constituting Property\"},{\"keyCombo\":\"c\",\"value\":\"Context - Activation Conditions\"},{\"keyCombo\":\"x\",\"value\":\"Context - Execution Constraints\"},{\"keyCombo\":\"r\",\"value\":\"Constituted Entity Property\"},{\"keyCombo\":\"o\",\"value\":\"Constituting Property Property\"},{\"keyCombo\":\"d\",\"value\":\"Deontic\"},{\"keyCombo\":\"f\",\"value\":\"Constitutive Function\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"c\",\"value\":\"(Cac) Activation Conditions\"},{\"keyCombo\":\"x\",\"value\":\"(Cex) Execution Constraints\"},{\"keyCombo\":\"d\",\"value\":\"(D) Deontic\"},{\"keyCombo\":\"e\",\"value\":\"(E) Constituted Entity\"},{\"keyCombo\":\"r\",\"value\":\"(E, prop) Constituted Entity Property\"},{\"keyCombo\":\"f\",\"value\":\"(F) Constitutive Function\"},{\"keyCombo\":\"p\",\"value\":\"(P) Constituting Property\"},{\"keyCombo\":\"o\",\"value\":\"(P, prop) Constituting Property Property\"}]}"
   }, {
     "name" : "ConstitutiveFunctionType",
     "tag_set" : {
@@ -345,7 +345,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : true,
     "description" : "Indicates type of constitutive function",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -383,7 +383,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : true,
     "description" : "Indicates whether this statement describes the policy it is embedded in (self-referential), as opposed to an entity/object, where the entity/object may also be a(nother) policy.",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -396,13 +396,13 @@
     "uiName" : "Embeds Institutional Statement",
     "type" : "uima.cas.Boolean",
     "enabled" : true,
-    "visible" : true,
+    "visible" : false,
     "include_in_hover" : false,
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates whether the component is or embeds an institutional statement in its own right.",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -421,7 +421,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "If the component value is largely implicit (e.g., \"it\"), this field is filled with the explicit content the component resolves to (e.g., \"the author\").",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -474,7 +474,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : true,
     "description" : "Describes policy relationship between policy referred to in constituted entity and policy otherwise referred to",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -484,7 +484,7 @@
   } ],
   "uiName" : "IG Core Constitutive Syntax",
   "type" : "span",
-  "description" : "Identifies institutional statement components for constitutive statements",
+  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG Profile Version: 0.2.1\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,
@@ -498,7 +498,7 @@
   "validation_mode" : "ALWAYS",
   "lock_to_token_offset" : false,
   "multiple_tokens" : true,
-  "project_name" : "IG Layer Project",
+  "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 } ]

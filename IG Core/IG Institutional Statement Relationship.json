@@ -11,14 +11,14 @@
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
-    "description" : "Indicates the precedence of multiple logically-combined statements. Lower values imply lower precedence.",
-    "project_name" : "IG Layer Project",
+    "description" : "Indicates the precedence of multiple logically-combined statements. Lower values imply lower precedence/priority.",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"limited\":true,\"minimum\":1,\"maximum\":20,\"editorType\":\"SPINNER\"}"
+    "traits" : "{\"limited\":true,\"minimum\":1,\"maximum\":99,\"editorType\":\"SPINNER\"}"
   }, {
     "name" : "LogicalRelationship",
     "tag_set" : {
@@ -34,10 +34,13 @@
         "tag_description" : "AND combination of institutional statements on a given nesting level"
       }, {
         "tag_name" : "Component-level Nested Statement",
-        "tag_description" : "Nested institutional statement contained within higher-level component."
+        "tag_description" : "Nested institutional statement contained within higher-level component (e.g., complete institutional statement within Condition component)."
       }, {
         "tag_name" : "Consequence Relationship (Vertical Nesting)",
-        "tag_description" : "Vertical relationship between monitored and consequential (regulatory punitive or incentivizing) statements. Requires annotation of statements as monitored or consequential. The target statement of the directed relationship is the consequential statement."
+        "tag_description" : "Vertical relationship between monitored and consequential (regulative punitive or incentivizing) statements. Requires annotation of statements as monitored or consequential. The target statement of the directed relationship is the consequential statement."
+      }, {
+        "tag_name" : "NOR Combination (Horizontal Nesting)",
+        "tag_description" : "NEITHER/NOR combination of institutional statements on a given nesting level"
       }, {
         "tag_name" : "OR Combination (Horizontal Nesting)",
         "tag_description" : "AND/OR combination of institutional statements on a given nesting level"
@@ -56,17 +59,17 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates relationship type of institutional statement",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND Combination (Horizontal Nesting)\"},{\"keyCombo\":\"c\",\"value\":\"Component-level Nested Statement\"},{\"keyCombo\":\"v\",\"value\":\"Consequence Relationship (Vertical Nesting)\"},{\"keyCombo\":\"n\",\"value\":\"NOR Combination (Horizontal Nesting)\"},{\"keyCombo\":\"o\",\"value\":\"OR Combination (Horizontal Nesting)\"},{\"keyCombo\":\"x\",\"value\":\"XOR Combination (Horizontal Nesting)\"}]}"
   } ],
   "uiName" : "IG Institutional Statement Relationship",
   "type" : "relation",
-  "description" : "Identifies logical relationships among institutional statement",
+  "description" : "Identifies logical relationships among institutional statements",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,
@@ -82,24 +85,81 @@
   "validation_mode" : "ALWAYS",
   "lock_to_token_offset" : false,
   "multiple_tokens" : true,
-  "project_name" : "IG Layer Project",
+  "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 }, {
   "name" : "webanno.custom.IGInstitutionalStatement",
   "features" : [ {
-    "name" : "ImplicitComponentReference",
-    "tag_set" : null,
-    "uiName" : "External Component Reference",
-    "type" : "webanno.custom.IGCoreRegulatorySyntax",
+    "name" : "StatementEnforcementPerspective",
+    "tag_set" : {
+      "name" : "IG Statement Perspective",
+      "typeUiName" : null,
+      "description" : "Indicates the perspective of an institutional statement emphasizing a non-sanctioning regulative or constitutive statement (monitored statement), or a statement containing enforcement characteristics (consequential statement).",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "1 - Monitored Statement",
+        "tag_description" : "Indicates a monitored statement. A monitored statement describes regulated statement content whose non-compliance is (potentially) sanctioned by another entity specified in a consequential statement.\r\n\r\nExample: Citizen must comply (Statement 1), or else police officer must fine (Statement 2), or else authority must review police officer conduct (Statement 3).\r\nStatement 1 is exclusively monitored (it does not contain any sanctioning component); Statement 2 is both monitored as well as consequential (it describes both a regulated action as well as sanctions for another actor's actions); Statement 3 is consequential only (no further oversight is specified)."
+      }, {
+        "tag_name" : "2 - Consequential Statement",
+        "tag_description" : "Indicates a consequential statement. A consequential statement specifies consequences (e.g., sanctions) for non-compliance with the statement it monitors (monitored statement). \r\n\r\nExample: Citizen must comply (Statement 1), or else police officer must fine (Statement 2), or else authority must review police officer conduct (Statement 3).\r\nStatement 1 is exclusively monitored (it does not contain any sanctioning component); Statement 2 is both monitored as well as consequential (it describes both a regulated action as well as sanctions for another actor's actions); Statement 3 is consequential only (no further oversight is specified)."
+      }, {
+        "tag_name" : "3 - Monitored and Consequential Statement",
+        "tag_description" : "Indicates a statement that is both monitored and consequential at the same time. A statement can both be monitored and consequential if capturing behaviour enforced as specified in a nested or related institutional statement, and describing regulatory-punitive or -incentivizing behaviour for a statement it monitors.\r\n\r\nExample: Citizen must comply (Statement 1), or else police officer must fine (Statement 2), or else authority must review police officer conduct (Statement 3).\r\nStatement 1 is exclusively monitored (it does not contain any sanctioning component); Statement 2 is both monitored as well as consequential (it describes both a regulated action as well as sanctions for another actor's actions); Statement 3 is consequential only (no further oversight is specified)."
+      } ],
+      "create_tag" : false
+    },
+    "uiName" : "Enforcement Perspective",
+    "type" : "uima.cas.String",
     "enabled" : true,
     "visible" : true,
     "include_in_hover" : false,
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
-    "description" : "Captures reference to external component implicit in identified institutional statements Example: Policy advisers should inform the public and should highlight risks. The second statement could resolve to first statement's attribute.",
-    "project_name" : "IG Layer Project",
+    "description" : "Indicates whether a statement describes regulated or constituted content (monitored statement), or consequences for non-compliance or violation of monitored statement content (consequential statement), or both.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"m\",\"value\":\"1 - Monitored Statement\"},{\"keyCombo\":\"c\",\"value\":\"2 - Consequential Statement\"},{\"keyCombo\":\"b\",\"value\":\"3 - Monitored and Consequential Statement\"}]}"
+  }, {
+    "name" : "ExternalConstitutiveComponentReference",
+    "tag_set" : null,
+    "uiName" : "External Constitutive Component Reference",
+    "type" : "webanno.custom.IGCoreConstitutiveSyntax",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Captures reference to an external (constitutive) component implicit in identified institutional statements, e.g., constituting property held in different statement.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "ARRAY",
+    "link_mode" : "WITH_ROLE",
+    "link_type_name" : "webanno.custom.IGInstitutionalStatementExternalConstitutiveComponentReferenceLink",
+    "link_type_role_feature_name" : "role",
+    "link_type_target_feature_name" : "target",
+    "traits" : "{\"defaultSlots\":[],\"enableRoleLabels\":true}"
+  }, {
+    "name" : "ExternalRegulativeComponentReference",
+    "tag_set" : null,
+    "uiName" : "External Regulative Component Reference",
+    "type" : "webanno.custom.IGCoreRegulativeSyntax",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Captures reference to external (regulative) component implicit in identified institutional statements. Example: Policy advisers should inform the public and should highlight risks. The second statement could resolve to first statement's attribute.",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "ARRAY",
     "link_mode" : "WITH_ROLE",
     "link_type_name" : "webanno.custom.IGInstitutionalStatementImplicitComponentReferenceLink",
@@ -117,52 +177,14 @@
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
-    "description" : "Identifies implicit component values inferred by the coder. List those as 'Component1: Value; Component2: Value' (e.g., 'Attribute: Actor; Deontic: must'). If a reference to other statements' components is possible, use 'External Component Reference' instead.",
-    "project_name" : "IG Layer Project",
+    "description" : "Identifies implicit component values inferred by the coder. List those as 'Component1=Value|Component2=Value' (e.g., 'Attribute=Actor|Deontic=must'). If a reference to other statements' components is possible, use 'External Component Reference' instead.",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":true,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
-  }, {
-    "name" : "StatementRegulatoryPerspective",
-    "tag_set" : {
-      "name" : "IG Statement Perspective",
-      "typeUiName" : null,
-      "description" : "Indicates the perspective of an institutional statement emphasizing a regular statement (monitored), or a statement containing enforcement characteristics.",
-      "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
-      "tags" : [ {
-        "tag_name" : "1 - Monitored Statement",
-        "tag_description" : "Indicates a monitored statement. A monitored statement describes regulated statement content whose non-compliance is (potentially) sanctioned by another entity specified in a consequential statement.\r\n\r\nExample: Citizen must comply (Statement 1), or else police officer must fine (Statement 2), or else authority must review police officer conduct (Statement 3).\r\nStatement 1 is exclusively monitored (it does not contain any sanctioning component); Statement 2 is both monitored as well as consequential (it describes both a regulated action as well as sanctions for another actor's actions); Statement 3 is consequential only (no further oversight is specified)."
-      }, {
-        "tag_name" : "2 - Consequential Statement",
-        "tag_description" : "Indicates a consequential statement. A consequential statement specifies consequences (e.g., sanctions) for non-compliance with the statement it monitors (monitored statement). \r\n\r\nExample: Citizen must comply (Statement 1), or else police officer must fine (Statement 2), or else authority must review police officer conduct (Statement 3).\r\nStatement 1 is exclusively monitored (it does not contain any sanctioning component); Statement 2 is both monitored as well as consequential (it describes both a regulated action as well as sanctions for another actor's actions); Statement 3 is consequential only (no further oversight is specified)."
-      }, {
-        "tag_name" : "3 - Monitored and Consequential Statement",
-        "tag_description" : "Indicates a statement that is both monitored and consequential at the same time. A statement can both be monitored and consequential if capturing behaviour enforced as specified in a nested or related institutional statement, and describing regulatory-punitive or -incentivizing behaviour for a statement it monitors.\r\n\r\nExample: Citizen must comply (Statement 1), or else police officer must fine (Statement 2), or else authority must review police officer conduct (Statement 3).\r\nStatement 1 is exclusively monitored (it does not contain any sanctioning component); Statement 2 is both monitored as well as consequential (it describes both a regulated action as well as sanctions for another actor's actions); Statement 3 is consequential only (no further oversight is specified)."
-      } ],
-      "create_tag" : true
-    },
-    "uiName" : "Regulatory Perspective",
-    "type" : "uima.cas.String",
-    "enabled" : true,
-    "visible" : true,
-    "include_in_hover" : false,
-    "required" : false,
-    "remember" : false,
-    "hideUnconstraintFeature" : false,
-    "description" : "Indicates whether a statement describes regulated content (monitored statement), or consequences for non-compliance (consequential statement), or both.",
-    "project_name" : "IG Layer Project",
-    "multi_value_mode" : "NONE",
-    "link_mode" : "NONE",
-    "link_type_name" : null,
-    "link_type_role_feature_name" : null,
-    "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"m\",\"value\":\"Monitored Statement\"},{\"keyCombo\":\"b\",\"value\":\"Monitored and Consequential Statement\"}]}"
+    "traits" : "{\"multipleRows\":true,\"collapsedRows\":1,\"expandedRows\":2,\"keyBindings\":[]}"
   }, {
     "name" : "RuleType",
     "tag_set" : {
@@ -206,7 +228,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates the rule type of the institutional statement.",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -247,7 +269,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates the statement's rule type as either operational, collective action, constitutional or meta-constitutional.",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -259,7 +281,7 @@
     "tag_set" : {
       "name" : "IG Institutional Statement Types",
       "typeUiName" : null,
-      "description" : "Institutional Statement Type Annotations",
+      "description" : "Institutional Statement Type Annotations as either constitutive or regulative",
       "language" : null,
       "type" : null,
       "type_name" : null,
@@ -268,8 +290,8 @@
         "tag_name" : "Constitutive Statement",
         "tag_description" : "Indicates constitutive statement"
       }, {
-        "tag_name" : "Regulatory Statement",
-        "tag_description" : "Indicates a regulatory statement"
+        "tag_name" : "Regulative Statement",
+        "tag_description" : "Indicates a regulative statement"
       } ],
       "create_tag" : true
     },
@@ -281,14 +303,14 @@
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
-    "description" : "Indicates statement type as either constitutive or regulatory.",
-    "project_name" : "IG Layer Project",
+    "description" : "Indicates statement type as either constitutive or regulative.",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"r\",\"value\":\"Regulatory Statement\"},{\"keyCombo\":\"c\",\"value\":\"Constitutive Statement\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"r\",\"value\":\"Regulative Statement\"},{\"keyCombo\":\"c\",\"value\":\"Constitutive Statement\"}]}"
   } ],
   "uiName" : "IG Institutional Statement",
   "type" : "span",
@@ -299,14 +321,14 @@
   "attach_type" : null,
   "attach_feature" : null,
   "allow_stacking" : true,
-  "cross_sentence" : false,
+  "cross_sentence" : true,
   "show_hover" : true,
   "anchoring_mode" : "TOKENS",
   "overlap_mode" : "ANY_OVERLAP",
   "validation_mode" : "ALWAYS",
   "lock_to_token_offset" : false,
   "multiple_tokens" : true,
-  "project_name" : "IG Layer Project",
+  "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 } ]

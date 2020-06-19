@@ -14,6 +14,9 @@
         "tag_name" : "AND Relationship",
         "tag_description" : "Identifies elements as AND-combined"
       }, {
+        "tag_name" : "NOR Relationship",
+        "tag_description" : "Identifies elements as NEITHER/NOR (NOR)-combined"
+      }, {
         "tag_name" : "OR Relationship",
         "tag_description" : "Identifies elements as AND/OR-combined"
       }, {
@@ -21,7 +24,7 @@
         "tag_description" : "Identifies a parent-child relationship between elements, with the parent being the element defined or composed, and the child as a component."
       }, {
         "tag_name" : "XOR Relationship",
-        "tag_description" : "Identifies elements as XOR-combined"
+        "tag_description" : "Identifies elements as EITHER/OR (XOR)-combined"
       } ],
       "create_tag" : true
     },
@@ -34,13 +37,13 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicate element relationship",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND Relationship\"},{\"keyCombo\":\"o\",\"value\":\"OR Relationship\"},{\"keyCombo\":\"p\",\"value\":\"Parent-Child Relationship (Target is Parent)\"},{\"keyCombo\":\"x\",\"value\":\"XOR Relationship\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND Relationship\"},{\"keyCombo\":\"o\",\"value\":\"OR Relationship\"},{\"keyCombo\":\"p\",\"value\":\"Parent-Child Relationship (Target is Parent)\"},{\"keyCombo\":\"x\",\"value\":\"XOR Relationship\"},{\"keyCombo\":\"n\",\"value\":\"NOR Relationship\"}]}"
   }, {
     "name" : "Exhaustive",
     "tag_set" : null,
@@ -53,7 +56,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : true,
     "description" : "Indicates that listing or collection is exhaustive (i.e., statement does not use terms that signal open-ended relationships, such as \"included\")",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -72,7 +75,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates precedence for a specific element relationship. Lower values imply lower precedence/priority.",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -98,7 +101,7 @@
   "validation_mode" : "ALWAYS",
   "lock_to_token_offset" : false,
   "multiple_tokens" : true,
-  "project_name" : "IG Layer Project",
+  "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 }, {
@@ -131,7 +134,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Type of element annotated (e.g., object, verb)",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -155,7 +158,7 @@
   "validation_mode" : "ALWAYS",
   "lock_to_token_offset" : false,
   "multiple_tokens" : true,
-  "project_name" : "IG Layer Project",
+  "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 } ]

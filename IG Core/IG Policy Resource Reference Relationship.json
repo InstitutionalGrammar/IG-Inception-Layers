@@ -12,7 +12,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates whether the logical relationship exhaustively characterises all alternatives (e.g., in conjunction with other linked relationships), or whether it is open-ended.",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -31,19 +31,19 @@
       "type_description" : null,
       "tags" : [ {
         "tag_name" : "AND",
-        "tag_description" : "Indicates AND relationship, i.e., conjunction. The relationship is undirected."
+        "tag_description" : "Indicates AND relationship, i.e., conjunction of components. The relationship is undirected."
       }, {
         "tag_name" : "AND NOT",
         "tag_description" : "Describes a combination of statements, where the occurrence of the action specified in the first statement is combined with the non-occurrence of the action specified in the second statement. The relationship is directed; the target is the non-occurring action statement."
       }, {
         "tag_name" : "AND/OR",
-        "tag_description" : "Indicates AND/OR relationship, i.e., inclusive disjunction.  The relationship is undirected."
+        "tag_description" : "Indicates AND/OR relationship (OR) in which both components may apply, or either one of those, i.e., an inclusive disjunction. The relationship is undirected."
       }, {
-        "tag_name" : "NEITHER NOR",
-        "tag_description" : "Describes a combination of statements, where the non-occurrence of the action specified in the first statement is combined with the non-occurrence of the action specified in the second statement. The relationship is undirected."
+        "tag_name" : "NOR",
+        "tag_description" : "Describes a NEITHER-NOR (NOR) relationship of components, where the non-occurrence of the first component is combined with the non-occurrence of the second component of the same type. The relationship is undirected."
       }, {
         "tag_name" : "XOR",
-        "tag_description" : "Indicates XOR relationship, i.e., exclusive disjunction. The relationship is undirected."
+        "tag_description" : "Indicates an EITHER-OR (XOR) relationship, i.e., exclusive disjunction. The relationship is undirected."
       } ],
       "create_tag" : true
     },
@@ -56,13 +56,13 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates the logical relationship between the references.",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND\"},{\"keyCombo\":\"o\",\"value\":\"AND/OR\"},{\"keyCombo\":\"n\",\"value\":\"NEITHER NOR\"},{\"keyCombo\":\"x\",\"value\":\"XOR\"},{\"keyCombo\":\"m\",\"value\":\"AND NOT\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND\"},{\"keyCombo\":\"o\",\"value\":\"AND/OR\"},{\"keyCombo\":\"x\",\"value\":\"XOR\"},{\"keyCombo\":\"m\",\"value\":\"AND NOT\"},{\"keyCombo\":\"n\",\"value\":\"NOR\"}]}"
   }, {
     "name" : "PrecedenceofRelationships",
     "tag_set" : null,
@@ -75,13 +75,13 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Indicates the precedence of this relationship among other relationships these elements might have. Lower values imply lower precedence/priority.",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : null
+    "traits" : "{\"limited\":true,\"minimum\":1,\"maximum\":99,\"editorType\":\"SPINNER\"}"
   } ],
   "uiName" : "IG Policy Resource Reference Relationship",
   "type" : "relation",
@@ -101,7 +101,7 @@
   "validation_mode" : "ALWAYS",
   "lock_to_token_offset" : false,
   "multiple_tokens" : true,
-  "project_name" : "IG Layer Project",
+  "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 }, {
@@ -118,7 +118,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "As an alternative (or in addition) to the explicit reference to a target (e.g., textual descriptor of policy referred to), a direct link to an annotated policy resource can be provided here.",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "ARRAY",
     "link_mode" : "WITH_ROLE",
     "link_type_name" : "webanno.custom.IGDocumentReferenceReferenceLinkLink",
@@ -130,7 +130,7 @@
     "tag_set" : {
       "name" : "IG Reference Scopes",
       "typeUiName" : null,
-      "description" : "Indicates reference scope",
+      "description" : "Indicates reference scope. Note that this tag set is extensible.",
       "language" : null,
       "type" : null,
       "type_name" : null,
@@ -145,8 +145,8 @@
         "tag_name" : "3 - Section",
         "tag_description" : "Refers to section"
       }, {
-        "tag_name" : "4 - Act",
-        "tag_description" : "Refers to Act in entirety"
+        "tag_name" : "4 - Document",
+        "tag_description" : "Refers to document in entirety"
       } ],
       "create_tag" : true
     },
@@ -159,7 +159,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Scope of document references",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -178,7 +178,7 @@
     "remember" : false,
     "hideUnconstraintFeature" : false,
     "description" : "Identifies target of document references",
-    "project_name" : "IG Layer Project",
+    "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
@@ -202,7 +202,7 @@
   "validation_mode" : "ALWAYS",
   "lock_to_token_offset" : false,
   "multiple_tokens" : true,
-  "project_name" : "IG Layer Project",
+  "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
   "on_click_javascript_action" : null
 } ]

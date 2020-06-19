@@ -1,40 +1,52 @@
-import webanno.custom.IGCoreRegulatorySyntax as IGCoreRegulatory;
+/*
+ This file is part of the IG-Inception-Layers project that provides a layer set to
+ annotate text according to the Institutional Grammar 2.0 specification.
+ 
+ Version: 0.2.1
+ Website: https://github.com/InstitutionalGrammar/IG-Inception-Layers
+ Maintainer: C. Frantz (christopher.frantz@ntnu.no)
+*/
+
+import webanno.custom.IGCoreRegulativeSyntax as IGCoreRegulative;
 import webanno.custom.IGCoreConstitutiveSyntax as IGCoreConstitutive;
 
-IGCoreRegulatory {
+IGCoreRegulative {
 
   /* Circumstance Taxonomy */
-  Component="Condition" -> Circumstance="(Spatial) Direction";
-  Component="Constraint" -> Circumstance="(Spatial) Direction";
-  Component="Attribute_Property" -> Circumstance="(Spatial) Direction";
-  Component="Object_Direct_Property" -> Circumstance="(Spatial) Direction";
-  Component="Object_Indirect_Property" -> Circumstance="(Spatial) Direction";
+  Component="(Cac) Activation Condition" -> Circumstance="(Spatial) Direction";
+  Component="(Cex) Execution Constraint" -> Circumstance="(Spatial) Direction";
+  Component="(A, prop) Attribute_Property" -> Circumstance="(Spatial) Direction";
+  Component="(Bdir, prop) Object_Direct_Property" -> Circumstance="(Spatial) Direction";
+  Component="(Bind, prop) Object_Indirect_Property" -> Circumstance="(Spatial) Direction";
   
   /* Animacy */
-  Component="Attribute" -> Animacy="Animate";
-  Component="Object_Direct" -> Animacy="Inanimate";
-  Component="Object_Indirect" -> Animacy="Inanimate";
+  Component="(A) Attribute" -> Animacy="Animate";
+  Component="(Bdir) Object_Direct" -> Animacy="Inanimate";
+  Component="(Bind) Object_Indirect" -> Animacy="Inanimate";
+  
+  /* Institutional Function annotation on aims */
+  Component="(I) Aim" -> InstitutionalFunction="Comply";
   
 }
 
 IGCoreConstitutive {
 
   /* Component-specific options for constitutive entities */
-  Component="Constituted Entity" -> Describespolicynotentity="Entity";
-  Component="Constituted Entity Property" -> Circumstance="(Spatial) Direction";
+  Component="(E) Constituted Entity" -> Describespolicynotentity="Entity";
+  Component="(E, prop) Constituted Entity Property" -> Circumstance="(Spatial) Direction";
   
   /* Component-specific options for constitutive functions */
-  Component="Constitutive Function" -> ConstitutiveFunctionType="(Definition) Definition";
+  Component="(F) Constitutive Function" -> ConstitutiveFunctionType="(Definition) Definition";
   
   /* Policy Relationship Directionality */
   ConstitutiveFunctionType="Policy Relationship" -> PolicyRelationship="Policy of concern amends";
   
-  /* Component-specific options for constitutive functions */
-  Component="Constituting Property" -> Circumstance="(Spatial) Direction";
-  Component="Constituting Property Property" -> Circumstance="(Spatial) Direction";
+  /* Component-specific options for constitutive properties */
+  Component="(P) Constituting Property" -> Circumstance="(Spatial) Direction";
+  Component="(P, prop) Constituting Property Property" -> Circumstance="(Spatial) Direction";
   
-  /* Circumstance Taxonomy for Context */
-  Component="Context - Activation Conditions" -> Circumstance="(Spatial) Direction";
-  Component="Context - Execution Constraints" -> Circumstance="(Spatial) Direction";
+  /* Circumstance Taxonomy for Context components */
+  Component="(Cac) Activation Conditions" -> Circumstance="(Spatial) Direction";
+  Component="(Cex) Execution Constraints" -> Circumstance="(Spatial) Direction";
   
 }

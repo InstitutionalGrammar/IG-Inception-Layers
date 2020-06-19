@@ -25,9 +25,9 @@ The layer files included in this release are the following (where containing mul
  * IG Core Constitutive Component Relationship - this layer contains the IG Core constitutive component specifications, alongside additional Context taxonomies. This file contains the following layers:
    * *IG Core Constitutive Syntax* (containing syntactic component annotations for constitutive institutional statements, along with relevant taxonomies)
    * *IG Core Constitutive Component Relationship* (containing logical relationship annotations amongst institutional grammar components)
- * IG Core Regulatory Component Relationship - this layer contains the IG Core regulatory component specifications, alongside additional Context taxonomies. This file contains the following layers:
-   * *IG Core Regulatory Syntax* (containing syntactic component annotations for regulatory institutional statements, along with context type taxonomy and further relevant taxonomies)
-   * *IG Core Regulatory Component Relationship* (containing logical relationship annotations amongst institutional grammar components)
+ * IG Core Regulative Component Relationship - this layer contains the IG Core regulative component specifications, alongside additional Context taxonomies. This file contains the following layers:
+   * *IG Core Regulative Syntax* (containing syntactic component annotations for regulative institutional statements, along with context type taxonomy and further relevant taxonomies)
+   * *IG Core Regulative Component Relationship* (containing logical relationship annotations amongst institutional grammar components)
  * IG Institutional Statement Relationship - this layer facilitates the representation of relationships amongst institutional statements. This file contains the following layers:
    * *IG Institutional Statement* (containing institutional statement types and characterization by rule type, statement nature, etc.)
    * *IG Institutional Statement Relationship* (containing logical relationship annotations amongst institutional statements)
@@ -37,7 +37,7 @@ The layer files included in this release are the following (where containing mul
  * *IG Policy Resource* - this layer facilitates the annotation of policy resources
 
 In addition to layers, the package contains constraints for the UI configuration and Coding Guidelines:
- * *IGCoreConstraints.txt* - Context-dependent UI layout for Context components and properties of constitutive and regulatory statements
+ * *IGCoreConstraints.txt* - Context-dependent UI layout for Context components and properties of constitutive and regulative statements
  * *IGLayersCodingGuidelines.txt* - Coding guidelines for the general Institutional Grammar annotation in Inception
 
 ## Contact
@@ -46,8 +46,14 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
+ * IG-Inception v0.2.1 (19/06/2020, C. Frantz)
+   * Revised terminology for regulative statements, renamed regulative and constitutive components to simplicity
+   * Reviewed tag sets for consistency across different layers, refined configuration for visible annotations to improve legibility
+   * Introduced institutional function annotation
+   * Revised UIMA namespaces
  * IG-Inception v0.2.0 (15/06/2020, C. Frantz)
    * Refined and completed full constitutive syntax layer, reviewed underlying naming schema, added coding guidelines
+   * Revised UIMA namespaces
  * IG-Inception v0.1.2 (02/05/2020, C. Frantz)
    * Added constitutive syntax layer (components, corresponding tagsets, conditional annotations); renamed 'IG Core' Layer to 'IG Core Regulatory Syntax'
    * Added policy relationship specification
