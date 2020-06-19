@@ -127,7 +127,7 @@
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"m\",\"value\":\"1 - Monitored Statement\"},{\"keyCombo\":\"c\",\"value\":\"2 - Consequential Statement\"},{\"keyCombo\":\"b\",\"value\":\"3 - Monitored and Consequential Statement\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"m\",\"value\":\"1 - Monitored Statement\"},{\"keyCombo\":\"n\",\"value\":\"2 - Consequential Statement\"},{\"keyCombo\":\"b\",\"value\":\"3 - Monitored and Consequential Statement\"}]}"
   }, {
     "name" : "ExternalConstitutiveComponentReference",
     "tag_set" : null,
