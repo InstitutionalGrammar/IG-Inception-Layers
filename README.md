@@ -46,6 +46,10 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
+ * IG-Inception v0.2.2 (30/08/2020, C. Frantz)
+   * Fixed conflicting keybindings in IG Institutional Statement Layer
+   * Added ability to indicate negation for constitutive components
+   * Minor refinements of descriptions
  * IG-Inception v0.2.1 (19/06/2020, C. Frantz)
    * Revised terminology for regulative statements, renamed regulative and constitutive components to simplicity
    * Reviewed tag sets for consistency across different layers, refined configuration for visible annotations to improve legibility

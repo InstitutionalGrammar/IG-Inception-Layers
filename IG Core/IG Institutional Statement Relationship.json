@@ -127,7 +127,7 @@
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"m\",\"value\":\"1 - Monitored Statement\"},{\"keyCombo\":\"n\",\"value\":\"2 - Consequential Statement\"},{\"keyCombo\":\"b\",\"value\":\"3 - Monitored and Consequential Statement\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"m\",\"value\":\"1 - Monitored Statement\"},{\"keyCombo\":\"K\",\"value\":\"2 - Consequential Statement\"},{\"keyCombo\":\"B\",\"value\":\"3 - Monitored and Consequential Statement\"}]}"
   }, {
     "name" : "ExternalConstitutiveComponentReference",
     "tag_set" : null,
@@ -314,7 +314,7 @@
   } ],
   "uiName" : "IG Institutional Statement",
   "type" : "span",
-  "description" : "Identifies institutional statement",
+  "description" : "Identifies and characterizes an institutional statement with respect to type, enforcement perspective, statement level. It further allows for the annotation of implied components.",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,
