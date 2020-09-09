@@ -146,15 +146,31 @@
     "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
   }, {
     "name" : "Animacy",
-    "tag_set" : null,
+    "tag_set" : {
+      "name" : "IG Animacy",
+      "typeUiName" : null,
+      "description" : "Tags indicating animacy",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "animate",
+        "tag_description" : "Indicates animate entity"
+      }, {
+        "tag_name" : "inanimate",
+        "tag_description" : "Indicates inanimate entity"
+      } ],
+      "create_tag" : true
+    },
     "uiName" : "Animacy",
-    "type" : "uima.cas.Boolean",
+    "type" : "uima.cas.String",
     "enabled" : true,
-    "visible" : false,
+    "visible" : true,
     "include_in_hover" : false,
     "required" : false,
     "remember" : false,
-    "hideUnconstraintFeature" : false,
+    "hideUnconstraintFeature" : true,
     "description" : "Animacy annotation for specific component types",
     "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
@@ -162,7 +178,7 @@
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : null
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
   }, {
     "name" : "Circumstance",
     "tag_set" : {
@@ -251,10 +267,10 @@
       "type_name" : null,
       "type_description" : null,
       "tags" : [ {
-        "tag_name" : "(Cac) Activation Conditions",
-        "tag_description" : "Conditions describe circumstances under which constitutive statements apply"
+        "tag_name" : "(Cac) Activation Condition",
+        "tag_description" : "Conditions describe circumstance under which constitutive statements apply"
       }, {
-        "tag_name" : "(Cex) Execution Constraints",
+        "tag_name" : "(Cex) Execution Constraint",
         "tag_description" : "Execution constraints describe qualifications of the constitutive function or offer further contextual characterization."
       }, {
         "tag_name" : "(D) Deontic",
@@ -294,11 +310,11 @@
     "link_type_target_feature_name" : null,
     "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"c\",\"value\":\"(Cac) Activation Conditions\"},{\"keyCombo\":\"x\",\"value\":\"(Cex) Execution Constraints\"},{\"keyCombo\":\"d\",\"value\":\"(D) Deontic\"},{\"keyCombo\":\"e\",\"value\":\"(E) Constituted Entity\"},{\"keyCombo\":\"r\",\"value\":\"(E, prop) Constituted Entity Property\"},{\"keyCombo\":\"f\",\"value\":\"(F) Constitutive Function\"},{\"keyCombo\":\"p\",\"value\":\"(P) Constituting Property\"},{\"keyCombo\":\"o\",\"value\":\"(P, prop) Constituting Property Property\"}]}"
   }, {
-    "name" : "ConstitutiveFunctionType",
+    "name" : "ConstitutiveFunction",
     "tag_set" : {
       "name" : "IG Constitutive Functions",
       "typeUiName" : null,
-      "description" : "Constitutive functions used in constitutive statements",
+      "description" : "Constitutive functions (as a specialization of institutional functions in the context of constitutive statements) characterize the functional semantics of constitutive function annotations with respect to the linkage of the constituted entity and, where existing, constituting properties, or contextual aspects.",
       "language" : null,
       "type" : null,
       "type_name" : null,
@@ -503,7 +519,7 @@
   } ],
   "uiName" : "IG Core Constitutive Syntax",
   "type" : "span",
-  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG Profile Version: 0.2.2\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases",
+  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG Profile Version: 0.2.3\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,

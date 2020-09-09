@@ -2,7 +2,7 @@
  This file is part of the IG-Inception-Layers project that provides a layer set to
  annotate text according to the Institutional Grammar 2.0 specification.
  
- Version: 0.2.1
+ Version: 0.2.3
  Website: https://github.com/InstitutionalGrammar/IG-Inception-Layers
  Maintainer: C. Frantz (christopher.frantz@ntnu.no)
 */
@@ -21,11 +21,16 @@ IGCoreRegulative {
   
   /* Animacy */
   Component="(A) Attribute" -> Animacy="Animate";
-  Component="(Bdir) Object_Direct" -> Animacy="Inanimate";
-  Component="(Bind) Object_Indirect" -> Animacy="Inanimate";
+  Component="(A, prop) Attribute_Property" -> Animacy="Animate";
+  Component="(Bdir) Object_Direct" -> Animacy="Animate";
+  Component="(Bdir, prop) Object_Direct_Property" -> Animacy="Animate";
+  Component="(Bind) Object_Indirect" -> Animacy="Animate";
+  Component="(Bind, prop) Object_Indirect_Property" -> Animacy="Animate";
+  Component="(Cac) Activation Condition" -> Animacy="Animate";
+  Component="(Cex) Execution Constraint" -> Animacy="Animate";
   
-  /* Institutional Function annotation on aims */
-  Component="(I) Aim" -> InstitutionalFunction="Comply";
+  /* Regulative Function annotation on aims */
+  Component="(I) Aim" -> RegulativeFunction="Comply";
   
 }
 
@@ -35,18 +40,26 @@ IGCoreConstitutive {
   Component="(E) Constituted Entity" -> Describespolicynotentity="Entity";
   Component="(E, prop) Constituted Entity Property" -> Circumstance="(Spatial) Direction";
   
+  /* Animacy */
+  Component="(E) Constituted Entity" -> Animacy="Animate";
+  Component="(E, prop) Constituted Entity Property" -> Animacy="Animate";
+  Component="(P) Constituting Property" -> Animacy="Animate";
+  Component="(P, prop) Constituting Property Property" -> Animacy="Animate";
+  Component="(Cac) Activation Condition" -> Animacy="Animate";
+  Component="(Cex) Execution Constraint" -> Animacy="Animate";
+  
   /* Component-specific options for constitutive functions */
-  Component="(F) Constitutive Function" -> ConstitutiveFunctionType="(Definition) Definition";
+  Component="(F) Constitutive Function" -> ConstitutiveFunction="(Definition) Definition";
   
   /* Policy Relationship Directionality */
-  ConstitutiveFunctionType="Policy Relationship" -> PolicyRelationship="Policy of concern amends";
+  ConstitutiveFunction="Policy Relationship" -> PolicyRelationship="Policy of concern amends";
   
   /* Component-specific options for constitutive properties */
   Component="(P) Constituting Property" -> Circumstance="(Spatial) Direction";
   Component="(P, prop) Constituting Property Property" -> Circumstance="(Spatial) Direction";
   
   /* Circumstance Taxonomy for Context components */
-  Component="(Cac) Activation Conditions" -> Circumstance="(Spatial) Direction";
-  Component="(Cex) Execution Constraints" -> Circumstance="(Spatial) Direction";
+  Component="(Cac) Activation Condition" -> Circumstance="(Spatial) Direction";
+  Component="(Cex) Execution Constraint" -> Circumstance="(Spatial) Direction";
   
 }
