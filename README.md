@@ -46,6 +46,9 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
+ * IG-Inception v0.2.3 (09/09/2020, C. Frantz)
+   * Resolved inconsistent component naming (activation conditions, execution constraint) in constitutive and regulative syntax
+   * Unified handling of animacy annotations
  * IG-Inception v0.2.2 (30/08/2020, C. Frantz)
    * Fixed conflicting keybindings in IG Institutional Statement Layer
    * Added ability to indicate negation for constitutive components
