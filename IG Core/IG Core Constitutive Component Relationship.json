@@ -217,14 +217,17 @@
         "tag_name" : "(Temporal) Time Frame",
         "tag_description" : "Time Frame - References to time frames"
       }, {
+        "tag_name" : "Concept",
+        "tag_description" : "Concept - References to concepts to or for which the statement applies"
+      }, {
         "tag_name" : "Exception",
         "tag_description" : "Exception - Expression of exception to general rule (e.g., \"unless ...\")"
       }, {
         "tag_name" : "Method",
-        "tag_description" : "Method - Means (e.g., artifact, tool) mediating activity"
+        "tag_description" : "Method - Reference to means (e.g., artifact, tool) or manners (e.g., handshake) mediating activity"
       }, {
         "tag_name" : "Observed Effect/Outcome",
-        "tag_description" : "Conditions/Constraints describing the outcome or effect of an aim by an actor involved in the action situation (e.g., \"Upon observing non-compliance, ...\")."
+        "tag_description" : "Observed Effect/Outcome - Conditions/Constraints describing the outcome or effect of an aim by an actor involved in the action situation (e.g., \"Upon observing non-compliance, ...\")."
       }, {
         "tag_name" : "Origin",
         "tag_description" : "Origin - Identifies the context as input, e.g., based on its origin."
@@ -308,7 +311,7 @@
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"c\",\"value\":\"(Cac) Activation Conditions\"},{\"keyCombo\":\"x\",\"value\":\"(Cex) Execution Constraints\"},{\"keyCombo\":\"d\",\"value\":\"(D) Deontic\"},{\"keyCombo\":\"e\",\"value\":\"(E) Constituted Entity\"},{\"keyCombo\":\"r\",\"value\":\"(E, prop) Constituted Entity Property\"},{\"keyCombo\":\"f\",\"value\":\"(F) Constitutive Function\"},{\"keyCombo\":\"p\",\"value\":\"(P) Constituting Property\"},{\"keyCombo\":\"o\",\"value\":\"(P, prop) Constituting Property Property\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"d\",\"value\":\"(D) Deontic\"},{\"keyCombo\":\"e\",\"value\":\"(E) Constituted Entity\"},{\"keyCombo\":\"r\",\"value\":\"(E, prop) Constituted Entity Property\"},{\"keyCombo\":\"f\",\"value\":\"(F) Constitutive Function\"},{\"keyCombo\":\"p\",\"value\":\"(P) Constituting Property\"},{\"keyCombo\":\"o\",\"value\":\"(P, prop) Constituting Property Property\"},{\"keyCombo\":\"c\",\"value\":\"(Cac) Activation Condition\"},{\"keyCombo\":\"x\",\"value\":\"(Cex) Execution Constraint\"}]}"
   }, {
     "name" : "ConstitutiveFunction",
     "tag_set" : {
@@ -519,7 +522,7 @@
   } ],
   "uiName" : "IG Core Constitutive Syntax",
   "type" : "span",
-  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG Profile Version: 0.2.3\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases",
+  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG Profile Version: 0.2.4\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,

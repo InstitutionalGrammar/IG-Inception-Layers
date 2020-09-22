@@ -3,9 +3,9 @@ Coding Guidelines for IG Inception Layers
 
 This file contains the operational annotation guidelines for annotating according to IG 2.0 in Inception. The IG Inception Layers can be found under https://github.com/InstitutionalGrammar/IG-Inception-Layers
 
-Version: 0.2.1 (C. Frantz, 19th June 2020)
+Version: 0.2.4 (C. Frantz, 22nd September 2020)
 
-For general instruction on IG coding and underlying rationale, please refer to the coding guidelines under https://institutionalgrammar.org. 
+For general instruction on IG coding and underlying rationale, please refer to the coding guidelines under https://institutionalgrammar.org/institutional-grammar-codebook/. 
 
 Introduction:
 -------------
