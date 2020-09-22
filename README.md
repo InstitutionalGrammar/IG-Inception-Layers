@@ -46,6 +46,8 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
+ * IG-Inception v0.2.4 (22/09/2020, C. Frantz)
+   * Added novel circumstance category (Concept) and fixed various keybindings
  * IG-Inception v0.2.3 (09/09/2020, C. Frantz)
    * Resolved inconsistent component naming (activation conditions, execution constraint) in constitutive and regulative syntax
    * Unified handling of animacy annotations
