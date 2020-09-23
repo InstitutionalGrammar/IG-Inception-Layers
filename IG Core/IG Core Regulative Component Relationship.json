@@ -42,6 +42,9 @@
         "tag_name" : "NOR",
         "tag_description" : "Describes a NEITHER-NOR (NOR) relationship of components, where the non-occurrence of the first component is combined with the non-occurrence of the second component of the same type. The relationship is undirected."
       }, {
+        "tag_name" : "Parent-Child Relationship (Target is Parent)",
+        "tag_description" : "Identifies a parent-child relationship between elements, with the parent being the element defined or composed, and the child as a component."
+      }, {
         "tag_name" : "XOR",
         "tag_description" : "Indicates an EITHER-OR (XOR) relationship, i.e., exclusive disjunction. The relationship is undirected."
       } ],
@@ -441,7 +444,7 @@
   } ],
   "uiName" : "IG Core Regulative Syntax",
   "type" : "span",
-  "description" : "Identifies institutional statement components for regulative statements\r\n\r\nIG Profile Version: 0.2.4\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases",
+  "description" : "Identifies institutional statement components for regulative statements\r\n\r\nIG Profile Version: 0.2.5\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,
