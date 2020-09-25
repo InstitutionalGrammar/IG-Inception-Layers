@@ -6,7 +6,7 @@ Institutional Grammar Layers for Inception Annotation Platform
 
 ## Content
 
-This repository contains [Inception](https://inception-project.github.io/) Annotation Layers for the IG Core specification of the Institutional Grammar, alongside selected additional features. 
+This repository contains [Inception](https://inception-project.github.io/) Annotation Layers for the IG Core specification of the [Institutional Grammar](https://arxiv.org/abs/2008.08937), alongside selected additional features. 
 
 ### Download 
 
