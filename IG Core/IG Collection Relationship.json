@@ -122,6 +122,9 @@
       }, {
         "tag_name" : "Object",
         "tag_description" : "Identifies element type as object"
+      }, {
+        "tag_name" : "Property",
+        "tag_description" : "Identifies a Property of an Action, Object, or Property (nested property)"
       } ],
       "create_tag" : true
     },
@@ -140,7 +143,7 @@
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"Action\"},{\"keyCombo\":\"o\",\"value\":\"Object\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"Action\"},{\"keyCombo\":\"o\",\"value\":\"Object\"},{\"keyCombo\":\"P\",\"value\":\"Property\"}]}"
   } ],
   "uiName" : "IG Collection",
   "type" : "span",

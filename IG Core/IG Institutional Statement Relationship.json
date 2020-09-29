@@ -290,6 +290,9 @@
         "tag_name" : "Constitutive Statement",
         "tag_description" : "Indicates constitutive statement"
       }, {
+        "tag_name" : "Fact/Observation",
+        "tag_description" : "Indicates a fact, observation, event or action instance as expressed in institutional statements (e.g., in conditional clauses)"
+      }, {
         "tag_name" : "Regulative Statement",
         "tag_description" : "Indicates a regulative statement"
       } ],
@@ -310,7 +313,7 @@
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"r\",\"value\":\"Regulative Statement\"},{\"keyCombo\":\"c\",\"value\":\"Constitutive Statement\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"r\",\"value\":\"Regulative Statement\"},{\"keyCombo\":\"c\",\"value\":\"Constitutive Statement\"},{\"keyCombo\":\"F\",\"value\":\"Fact/Observation\"}]}"
   } ],
   "uiName" : "IG Institutional Statement",
   "type" : "span",
