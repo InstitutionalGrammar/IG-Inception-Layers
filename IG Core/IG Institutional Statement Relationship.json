@@ -36,7 +36,7 @@
         "tag_name" : "Component-level Nested Statement",
         "tag_description" : "Nested institutional statement contained within higher-level component (e.g., complete institutional statement within Condition component)."
       }, {
-        "tag_name" : "Consequence Relationship (Vertical Nesting)",
+        "tag_name" : "Consequence Relationship/Vertical Nesting (Target is Consequence)",
         "tag_description" : "Vertical relationship between monitored and consequential (regulative punitive or incentivizing) statements. Requires annotation of statements as monitored or consequential. The target statement of the directed relationship is the consequential statement."
       }, {
         "tag_name" : "NOR Combination (Horizontal Nesting)",
@@ -65,7 +65,7 @@
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND Combination (Horizontal Nesting)\"},{\"keyCombo\":\"c\",\"value\":\"Component-level Nested Statement\"},{\"keyCombo\":\"v\",\"value\":\"Consequence Relationship (Vertical Nesting)\"},{\"keyCombo\":\"n\",\"value\":\"NOR Combination (Horizontal Nesting)\"},{\"keyCombo\":\"o\",\"value\":\"OR Combination (Horizontal Nesting)\"},{\"keyCombo\":\"x\",\"value\":\"XOR Combination (Horizontal Nesting)\"}]}"
+    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND Combination (Horizontal Nesting)\"},{\"keyCombo\":\"c\",\"value\":\"Component-level Nested Statement\"},{\"keyCombo\":\"n\",\"value\":\"NOR Combination (Horizontal Nesting)\"},{\"keyCombo\":\"o\",\"value\":\"OR Combination (Horizontal Nesting)\"},{\"keyCombo\":\"x\",\"value\":\"XOR Combination (Horizontal Nesting)\"},{\"keyCombo\":\"v\",\"value\":\"Consequence Relationship/Vertical Nesting (Target is Consequence)\"}]}"
   } ],
   "uiName" : "IG Institutional Statement Relationship",
   "type" : "relation",

@@ -2,7 +2,7 @@
  This file is part of the IG-Inception-Layers project that provides a layer set to
  annotate text according to the Institutional Grammar 2.0 specification.
  
- Version: 0.2.4
+ Version: 0.2.5
  Website: https://github.com/InstitutionalGrammar/IG-Inception-Layers
  Maintainer: C. Frantz (christopher.frantz@ntnu.no)
 */

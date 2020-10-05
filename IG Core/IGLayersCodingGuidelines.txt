@@ -1,9 +1,9 @@
 Coding Guidelines for IG Inception Layers
 -----------------------------------------
 
-This file contains the operational annotation guidelines for annotating according to IG 2.0 in Inception. The IG Inception Layers can be found under https://github.com/InstitutionalGrammar/IG-Inception-Layers
+This file contains the operational annotation guidelines for annotating according to IG 2.0 in Inception. The IG Inception Layers, including all previous releases, can be found under https://github.com/InstitutionalGrammar/IG-Inception-Layers
 
-Version: 0.2.4 (C. Frantz, 22nd September 2020)
+Version: 0.2.5 (C. Frantz)
 
 For general instruction on IG coding and underlying rationale, please refer to the coding guidelines under https://institutionalgrammar.org/institutional-grammar-codebook/. 
 
@@ -31,6 +31,8 @@ On syntax level, the following procedural steps apply:
 Where nested institutional statements exist, complete the annotation on a given level, before revisiting nested components in a second iteration, e.g., annotating a potentially nested activation condition as activation conditions first, before continuing with the lower-level annotation (e.g., decomposing embedded nested clause into individual components).
 
 Where component-level combinations exist (e.g., eat and drink) within a given statement, annotate those individually as component (e.g., aim), and draw a link from one component to the other. Indicate the logical operator in the link (e.g., AND), as well as precedence (if multiple logical relationships exist).
+
+Logical relationships cannot only be used to capture relationships between the same component types, but also to link components hierarchically (e.g., objects and object properties, or properties and sub properties). Ensure to choose the corresponding relationship type when linking individual components.
 
 Specific component types allow further specific annotations (e.g., Circumstance Taxonomy, Institutional Functions, Constitutive Functions) discussed as part of the general coding guidelines for IG 2.0.
 
