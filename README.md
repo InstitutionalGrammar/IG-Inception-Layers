@@ -46,6 +46,10 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
+ * IG-Inception v0.2.5 -- in preparation
+   * Added novel circumstance category (Cause/Reason)
+   * Renamed and clarified logical relationship description for institutional statements and components
+   * Updated guidelines accordingly
  * IG-Inception v0.2.4 (22/09/2020, C. Frantz)
    * Added novel circumstance category (Concept) and fixed various keybindings
  * IG-Inception v0.2.3 (09/09/2020, C. Frantz)
