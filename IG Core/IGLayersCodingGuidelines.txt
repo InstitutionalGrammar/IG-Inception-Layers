@@ -14,7 +14,7 @@ The coding of institutional statements occur on two levels, the syntax level and
 
 The syntax level annotation focuses on the annotation of specific tokens or clauses with the associated IG component. In addition it affords intra-statement relationship (e.g., relationships between components of the statement, such as component-level combinations). 
 
-The statement level identifies the scope of the statements more generally and resolves inter-statement relationships amongst the statements, such as horizontal (e.g., AND, OR) and vertical nesting (e.g., monitored, consequentially), as well as providing references to implied components, or components outside a given statement.
+The statement level identifies the scope of the statements more generally and resolves inter-statement relationships amongst the statements, such as horizontal (e.g., AND, OR) and vertical nesting (e.g., monitored, consequential), as well as providing references to implied components, or components outside a given statement.
 
 The principal approaches for both coding levels are outlined below (and provide a basis for augmentation for further project-specific guidelines). 
 
@@ -32,9 +32,9 @@ Where nested institutional statements exist, complete the annotation on a given 
 
 Where component-level combinations exist (e.g., eat and drink) within a given statement, annotate those individually as component (e.g., aim), and draw a link from one component to the other. Indicate the logical operator in the link (e.g., AND), as well as precedence (if multiple logical relationships exist).
 
-Logical relationships cannot only be used to capture relationships between the same component types, but also to link components hierarchically (e.g., objects and object properties, or properties and sub properties). Ensure to choose the corresponding relationship type when linking individual components.
+Logical relationships cannot only be used to capture relationships between the same component types, but also to link components hierarchically (e.g., objects and object properties, or properties and sub properties). Ensure to select the corresponding relationship type when linking individual components (e.g., 'Child-to-Parent Relationship').
 
-Specific component types allow further specific annotations (e.g., Circumstance Taxonomy, Institutional Functions, Constitutive Functions) discussed as part of the general coding guidelines for IG 2.0.
+Specific component types allow further specific annotations (e.g., Circumstance Taxonomy, Regulative Functions, Constitutive Functions) discussed as part of the general coding guidelines for IG 2.0 (see URL above).
 
 Where components of a given institutional statement are implicit or exist outside an institutional statement, indicate those in the 'IG Institutional Statement' layer as part of statement-level annotation.
 
@@ -43,7 +43,7 @@ Specific considerations for complex data structures or policy references that co
 Complex data structures:
 ------------------------
 
-Where individual components contain complex regular structures (e.g., lists, or quantitative information), those can be decomposed using the 'IG Collection' layer and the 'Complex Data Structure' layer, respectively. The purpose is to make commonly found textual structures machine-readable.
+Where individual components contain complex regular structures (e.g., lists, or quantitative information), those can be decomposed using the 'IG Collection' layer and the 'IG Complex Data Structure' layer, respectively. The purpose is to make commonly found textual structures machine-readable.
 
 The 'IG Collection' layer identifies elements in lists (e.g., item1 AND item2, etc.) or other logical relationships (e.g., item1 AND item2 XOR item3, etc.). It is further possible to indicate precedence amongst the relationships, and further indicate whether the listing is exhaustive.
 
@@ -52,9 +52,9 @@ The 'IG Complex Data Structure' layer allows for the decomposition of elementary
 Policy References:
 ------------------
 
-Where components make reference to other policy/documents, use the 'IG Policy Resource' layer to provide an absolute reference to the linked policy of concern. This entry can be textual and/or by identifier (e.g., unique identifier) and consider the scope of the referenced statements (e.g., single statement, paragraph, section, Act, etc.)
+Where components make reference to other policy/documents, use the 'IG Policy Resource' layer to provide an absolute reference to the linked external policy. This entry can be textual and/or by identifier (e.g., unique identifier) and consider the scope of the referenced statements (e.g., single statement, paragraph, section, Act, etc.). Relevant hierarchies for policy documents have to be determined as part of the project planning process (subject to field, traditions, etc.).
 
-Where statements make reference to statements within the same policy, use the 'IG Policy Resource Reference' layer to draw a link between source and target policy explicitly. This can further include the specification of scope and textual identifier.
+Where statements make reference to statements within the same policy, use the 'IG Policy Resource Reference' layer to draw a link between source and target policy explicitly. This can further include the specification of scope and/or textual identifier.
 
 Statement-level annotation:
 ---------------------------
