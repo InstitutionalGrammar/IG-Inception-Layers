@@ -87,7 +87,8 @@
   "multiple_tokens" : true,
   "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
-  "on_click_javascript_action" : null
+  "on_click_javascript_action" : null,
+  "traits" : null
 }, {
   "name" : "webanno.custom.IGInstitutionalStatement",
   "features" : [ {
@@ -177,14 +178,14 @@
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
-    "description" : "Identifies implicit component values inferred by the coder. List those as 'Component1=Value|Component2=Value' (e.g., 'Attribute=Actor|Deontic=must'). If a reference to other statements' components is possible, use 'External Component Reference' instead.",
+    "description" : "Identifies implicit component values inferred by the coder. List those as 'Component1=Value|Component2=Value' (e.g., 'A=Actor|D=must'). If a reference to other statements' components is possible, use 'External Component Reference' instead.",
     "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":true,\"collapsedRows\":1,\"expandedRows\":2,\"keyBindings\":[]}"
+    "traits" : "{\"multipleRows\":true,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":2,\"keyBindings\":[]}"
   }, {
     "name" : "RuleType",
     "tag_set" : {
@@ -333,5 +334,6 @@
   "multiple_tokens" : true,
   "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
-  "on_click_javascript_action" : null
+  "on_click_javascript_action" : null,
+  "traits" : null
 } ]
