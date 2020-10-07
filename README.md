@@ -46,9 +46,10 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
- * IG-Inception v0.2.5 -- in preparation
+ * IG-Inception v0.2.5 (08/10/2020, C. Frantz)
    * Added novel circumstance category (Cause/Reason)
-   * Renamed and clarified logical relationship description for institutional statements and components
+   * Extended constitutive functions taxonomy in line with Codebook
+   * Renamed and clarified logical relationship characterization for institutional statements and components
    * Updated guidelines accordingly
  * IG-Inception v0.2.4 (22/09/2020, C. Frantz)
    * Added novel circumstance category (Concept) and fixed various keybindings
