@@ -125,7 +125,8 @@
   "multiple_tokens" : true,
   "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
-  "on_click_javascript_action" : null
+  "on_click_javascript_action" : null,
+  "traits" : null
 }, {
   "name" : "webanno.custom.IGCoreConstitutiveSyntax",
   "features" : [ {
@@ -329,6 +330,18 @@
       "type_name" : null,
       "type_description" : null,
       "tags" : [ {
+        "tag_name" : "(Conferral) Liability",
+        "tag_description" : "References the conferral of a liability"
+      }, {
+        "tag_name" : "(Conferral) Power",
+        "tag_description" : "References the conferral of authority or other forms of power or competence."
+      }, {
+        "tag_name" : "(Conferral) Right",
+        "tag_description" : "References the conferral of a right"
+      }, {
+        "tag_name" : "(Conferral) Status",
+        "tag_description" : "Indicates conferral of status - this category is more general than other conferral characterizations"
+      }, {
         "tag_name" : "(Definition) Definition",
         "tag_description" : "Defines an entity (e.g., actor, object, role, action, policy) intensionally (e.g., \"is\", \"counts as\") or extensionally (e.g., by what it does)."
       }, {
@@ -343,9 +356,6 @@
       }, {
         "tag_name" : "Composition",
         "tag_description" : "Signals that the constituted entity is composed of the elements described in constituting properties"
-      }, {
-        "tag_name" : "Conferral",
-        "tag_description" : "Indicates conferral of rights or authority (\"is assigned\")"
       }, {
         "tag_name" : "Information",
         "tag_description" : "Indicates a purely informational statement without constitutive weight"
@@ -544,5 +554,6 @@
   "multiple_tokens" : true,
   "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
-  "on_click_javascript_action" : null
+  "on_click_javascript_action" : null,
+  "traits" : null
 } ]
