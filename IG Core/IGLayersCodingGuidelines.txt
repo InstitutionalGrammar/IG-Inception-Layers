@@ -3,7 +3,7 @@ Coding Guidelines for IG Inception Layers
 
 This file contains the operational annotation guidelines for annotating according to IG 2.0 in Inception. The IG Inception Layers, including all previous releases, can be found under https://github.com/InstitutionalGrammar/IG-Inception-Layers
 
-Version: 0.2.5 (C. Frantz)
+Version: 0.2.6 (C. Frantz)
 
 For general instruction on IG coding and underlying rationale, please refer to the coding guidelines under https://arxiv.org/abs/2008.08937. 
 
@@ -34,7 +34,7 @@ Where component-level combinations exist (e.g., eat and drink) within a given st
 
 Logical relationships cannot only be used to capture relationships between the same component types, but also to link components hierarchically (e.g., objects and object properties, or properties and sub properties). Ensure to select the corresponding relationship type when linking individual components (e.g., 'Child-to-Parent Relationship').
 
-Specific component types allow further specific annotations (e.g., Circumstance Taxonomy, Regulative Functions, Constitutive Functions) discussed as part of the general coding guidelines for IG 2.0 (see URL above).
+Specific component types allow further specific annotations (e.g., Context Taxonomy, Regulative Functions, Constitutive Functions) discussed as part of the general coding guidelines for IG 2.0 (see URL above).
 
 Where components of a given institutional statement are implicit or exist outside an institutional statement, indicate those in the 'IG Institutional Statement' layer as part of statement-level annotation.
 

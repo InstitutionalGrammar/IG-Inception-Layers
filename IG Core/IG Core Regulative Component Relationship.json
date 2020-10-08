@@ -125,7 +125,8 @@
   "multiple_tokens" : true,
   "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
-  "on_click_javascript_action" : null
+  "on_click_javascript_action" : null,
+  "traits" : null
 }, {
   "name" : "webanno.custom.IGCoreRegulativeSyntax",
   "features" : [ {
@@ -175,89 +176,6 @@
     "remember" : false,
     "hideUnconstraintFeature" : true,
     "description" : "Animacy annotation for specific component types",
-    "project_name" : "IG-Inception-Layer Development",
-    "multi_value_mode" : "NONE",
-    "link_mode" : "NONE",
-    "link_type_name" : null,
-    "link_type_role_feature_name" : null,
-    "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
-  }, {
-    "name" : "Circumstance",
-    "tag_set" : {
-      "name" : "IG Circumstance Taxonomy",
-      "typeUiName" : null,
-      "description" : "Tags indicating circumstance types",
-      "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
-      "tags" : [ {
-        "tag_name" : "(Spatial) Direction",
-        "tag_description" : "Direction - References to directions, inclusion of intermediary locations (e.g., “via”)"
-      }, {
-        "tag_name" : "(Spatial) Location",
-        "tag_description" : "Location - References to specific locations"
-      }, {
-        "tag_name" : "(State) State",
-        "tag_description" : "State - References to a specific state"
-      }, {
-        "tag_name" : "(State) State Transition/Process",
-        "tag_description" : "State Transition/Process - References a change in state or a process reflecting change in state"
-      }, {
-        "tag_name" : "(Temporal) Beginning",
-        "tag_description" : "Indicates the beginning of a time frame"
-      }, {
-        "tag_name" : "(Temporal) End",
-        "tag_description" : "Indicates the end of a time frame"
-      }, {
-        "tag_name" : "(Temporal) Frequency",
-        "tag_description" : "Indicates frequency expression"
-      }, {
-        "tag_name" : "(Temporal) Point in Time",
-        "tag_description" : "Point in time - References to specific points in time"
-      }, {
-        "tag_name" : "(Temporal) Time Frame",
-        "tag_description" : "Time Frame - References to time frames"
-      }, {
-        "tag_name" : "Cause/Reason",
-        "tag_description" : "Cause/Reason - References to underlying causes or reasons for action or constitution"
-      }, {
-        "tag_name" : "Concept",
-        "tag_description" : "Concept - References to concepts to or for which the statement applies"
-      }, {
-        "tag_name" : "Exception",
-        "tag_description" : "Exception - Expression of exception to general rule (e.g., \"unless ...\")"
-      }, {
-        "tag_name" : "Method",
-        "tag_description" : "Method - Reference to means (e.g., artifact, tool) or manners (e.g., handshake) mediating activity"
-      }, {
-        "tag_name" : "Observed Effect/Outcome",
-        "tag_description" : "Observed Effect/Outcome - Conditions/Constraints describing the outcome or effect of an aim by an actor involved in the action situation (e.g., \"Upon observing non-compliance, ...\")."
-      }, {
-        "tag_name" : "Origin",
-        "tag_description" : "Origin - Identifies the context as input, e.g., based on its origin."
-      }, {
-        "tag_name" : "Procedural Order",
-        "tag_description" : "Procedural Order - Context specifications associated with explicit or implied execution order, i.e., performing one action depends on completion of another"
-      }, {
-        "tag_name" : "Process",
-        "tag_description" : "Process - Reference to process specification an action needs to comply with or otherwise relates to"
-      }, {
-        "tag_name" : "Purpose/Function",
-        "tag_description" : "Purpose/Function - Conditions/Constraints describing the purpose or intent of an aim"
-      } ],
-      "create_tag" : true
-    },
-    "uiName" : "Circumstance",
-    "type" : "uima.cas.String",
-    "enabled" : true,
-    "visible" : true,
-    "include_in_hover" : false,
-    "required" : false,
-    "remember" : false,
-    "hideUnconstraintFeature" : true,
-    "description" : "Identifies contextual circumstances types",
     "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
@@ -324,6 +242,83 @@
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
     "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"(A) Attribute\"},{\"keyCombo\":\"w\",\"value\":\"(A, prop) Attribute_Property\"},{\"keyCombo\":\"b\",\"value\":\"(Bdir) Object_Direct\"},{\"keyCombo\":\"h\",\"value\":\"(Bdir, prop) Object_Direct_Property\"},{\"keyCombo\":\"n\",\"value\":\"(Bind) Object_Indirect\"},{\"keyCombo\":\"j\",\"value\":\"(Bind, prop) Object_Indirect_Property\"},{\"keyCombo\":\"c\",\"value\":\"(Cac) Activation Condition\"},{\"keyCombo\":\"x\",\"value\":\"(Cex) Execution Constraint\"},{\"keyCombo\":\"d\",\"value\":\"(D) Deontic\"},{\"keyCombo\":\"i\",\"value\":\"(I) Aim\"}]}"
+  }, {
+    "name" : "Circumstance",
+    "tag_set" : {
+      "name" : "IG Context Taxonomy",
+      "typeUiName" : null,
+      "description" : "Tags indicating context categories",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "(Spatial) Direction",
+        "tag_description" : "Direction - References to directions, inclusion of intermediary locations (e.g., “via”)"
+      }, {
+        "tag_name" : "(Spatial) Location",
+        "tag_description" : "Location - References to specific locations"
+      }, {
+        "tag_name" : "(State) State",
+        "tag_description" : "State - References to a specific state"
+      }, {
+        "tag_name" : "(State) State Transition/Process",
+        "tag_description" : "State Transition/Process - References a change in state or a process reflecting change in state"
+      }, {
+        "tag_name" : "(Temporal) Beginning",
+        "tag_description" : "Indicates the beginning of a time frame"
+      }, {
+        "tag_name" : "(Temporal) End",
+        "tag_description" : "Indicates the end of a time frame"
+      }, {
+        "tag_name" : "(Temporal) Frequency",
+        "tag_description" : "Indicates frequency expression"
+      }, {
+        "tag_name" : "(Temporal) Point in Time",
+        "tag_description" : "Point in time - References to specific points in time"
+      }, {
+        "tag_name" : "(Temporal) Time Frame",
+        "tag_description" : "Time Frame - References to time frames"
+      }, {
+        "tag_name" : "Cause/Reason",
+        "tag_description" : "Cause/Reason - References to underlying causes or reasons for action or constitution"
+      }, {
+        "tag_name" : "Domain",
+        "tag_description" : "Domain - Conditions/Constraints applying to a specified activity, topical, or other conceptual realm."
+      }, {
+        "tag_name" : "Exception",
+        "tag_description" : "Exception - Expression of exception to general rule (e.g., \"unless ...\")"
+      }, {
+        "tag_name" : "Method",
+        "tag_description" : "Method - Reference to means (e.g., artifact, tool) or manners (e.g., handshake) mediating activity"
+      }, {
+        "tag_name" : "Outcome/Effect",
+        "tag_description" : "Outcome/Effect - Conditions/Constraints describing the outcome or effect of an aim by an actor involved in the action situation (e.g., \"Upon observing non-compliance, ...\")."
+      }, {
+        "tag_name" : "Procedural Order",
+        "tag_description" : "Procedural Order - Context specifications associated with explicit or implied execution order, i.e., performing one action depends on completion of another"
+      }, {
+        "tag_name" : "Purpose/Function",
+        "tag_description" : "Purpose/Function - Conditions/Constraints describing the purpose or intent of an aim"
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Context Category",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : true,
+    "description" : "Characterizes context categories in regulative statements",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
   }, {
     "name" : "InstitutionalStatement",
     "tag_set" : null,
@@ -447,7 +442,7 @@
   } ],
   "uiName" : "IG Core Regulative Syntax",
   "type" : "span",
-  "description" : "Identifies institutional statement components for regulative statements\r\n\r\nIG Profile Version: 0.2.5\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases",
+  "description" : "Identifies institutional statement components for regulative statements\r\n\r\nIG Profile Version: 0.2.6\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,
@@ -463,5 +458,6 @@
   "multiple_tokens" : true,
   "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
-  "on_click_javascript_action" : null
+  "on_click_javascript_action" : null,
+  "traits" : null
 } ]

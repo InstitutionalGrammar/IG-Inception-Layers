@@ -2,7 +2,7 @@
  This file is part of the IG-Inception-Layers project that provides a layer set to
  annotate text according to the Institutional Grammar 2.0 specification.
  
- Version: 0.2.5
+ Version: 0.2.6
  Website: https://github.com/InstitutionalGrammar/IG-Inception-Layers
  Maintainer: C. Frantz (christopher.frantz@ntnu.no)
 */
@@ -12,7 +12,7 @@ import webanno.custom.IGCoreConstitutiveSyntax as IGCoreConstitutive;
 
 IGCoreRegulative {
 
-  /* Circumstance Taxonomy */
+  /* Context Taxonomy */
   Component="(Cac) Activation Condition" -> Circumstance="(Spatial) Direction";
   Component="(Cex) Execution Constraint" -> Circumstance="(Spatial) Direction";
   Component="(A, prop) Attribute_Property" -> Circumstance="(Spatial) Direction";
@@ -58,7 +58,7 @@ IGCoreConstitutive {
   Component="(P) Constituting Property" -> Circumstance="(Spatial) Direction";
   Component="(P, prop) Constituting Property Property" -> Circumstance="(Spatial) Direction";
   
-  /* Circumstance Taxonomy for Context components */
+  /* Context Taxonomy */
   Component="(Cac) Activation Condition" -> Circumstance="(Spatial) Direction";
   Component="(Cex) Execution Constraint" -> Circumstance="(Spatial) Direction";
   

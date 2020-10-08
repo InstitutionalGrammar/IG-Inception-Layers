@@ -318,7 +318,7 @@
   } ],
   "uiName" : "IG Institutional Statement",
   "type" : "span",
-  "description" : "Identifies and characterizes an institutional statement with respect to type, enforcement perspective, statement level. It further allows for the annotation of implied components.",
+  "description" : "Identifies and characterizes an institutional statement with respect to type, enforcement perspective, statement level. It further allows for the annotation of implied components.\r\n\r\nIG Profile Version: 0.2.6\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,
