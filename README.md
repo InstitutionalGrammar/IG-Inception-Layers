@@ -8,6 +8,12 @@ Institutional Grammar Layers for Inception Annotation Platform
 
 This repository contains [Inception](https://inception-project.github.io/) Annotation Layers for the IG Core specification of the [Institutional Grammar](https://arxiv.org/abs/2008.08937), alongside selected additional features. 
 
+This Readme file provides 
+* instructions for download and import of the layers into Inception, 
+* a high-level overview of the layers provided as part of this repository,
+* a workaround for multi-line annotations in Inception, and
+* the changelog for all versions of the IG Inception layers.
+
 ### Download 
 
 Please refer to the [Releases](../../releases) page to download any of the IG-Inception layers releases. All releases will be retained so as to maintain long-term compability with and accessibility of encoded datasets. Ensure that you document the specific release used during encoding alongside your dataset.
@@ -39,6 +45,36 @@ The layer files included in this release are the following (where containing mul
 In addition to layers, the package contains constraints for the UI configuration and Coding Guidelines:
  * *IGCoreConstraints.txt* - Context-dependent UI layout for Context components and properties of constitutive and regulative statements
  * *IGLayersCodingGuidelines.txt* - Coding guidelines for the general Institutional Grammar annotation in Inception
+ 
+## Document Preparation Workaround (Multi-line annotations in Inception)
+
+A specific challenge of Inception-based coding is the expansion of multi-line annotations. Whenever the coder annotates a statement across line boundaries, the annotated text is expanded onto a single line, leading to extensive horizontal scrolling. This problem is specific to Inception and not related to the provided layers. A workaround to alleviate this is to preprocess documents with fixed line boundaries and adjust the editor settings accordingly.
+
+The following workaround addresses this by introducing a forced line break after 100 characters (this can be adjusted by substituting the corresponding value in the 'Find what:' field described below). Note that this can lead to arbitrary word separation, which may require further post-processing.
+
+Preparation:
+* Ensure the document is available in plain text format 
+* Create a copy of the original document prior to the following steps
+
+Instructions for reformatting:
+* Open document in Notepad++
+* Press Ctrl-A to mark the complete document
+* Open Search dialog and switch to 'Replace' tab
+* In the 'Find what:' field, enter: \s(?<=.{100})
+* In the 'Replace with:' field, enter: \n
+* Click 'Replace All'
+* Save the reformatted document
+
+Adjust annotation editor setting:
+* Import the reformatted document in the Inception project
+* Open annotation editor
+* Open editor settings (cogwheel button)
+* Switch to 'brat (line-oriented)'
+* Click 'Save' button
+
+Now multi-line coding should operate without horizonal expansion.
+
+As mentioned above, this is a workaround established based on Inception coding experience and does not imply recommendation for general use. If applied in production settings, further refinement (e.g., word alignment along line breaks) is recommended to ensure high-quality annotations.
 
 ## Contact
 
@@ -46,6 +82,9 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
+ * IG-Inception v0.2.6 (09/10/2020, C. Frantz)
+   * Updated and renamed context taxonomy in line with Codebook revisions
+   * Added Inception workaround description
  * IG-Inception v0.2.5 (08/10/2020, C. Frantz)
    * Added novel circumstance category (Cause/Reason)
    * Extended constitutive functions taxonomy in line with Codebook
