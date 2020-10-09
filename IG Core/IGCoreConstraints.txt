@@ -2,7 +2,7 @@
  This file is part of the IG-Inception-Layers project that provides a layer set to
  annotate text according to the Institutional Grammar 2.0 specification.
  
- Version: 0.2.6
+ Version: 0.2.6 (includes variation of Conversation Treaties)
  Website: https://github.com/InstitutionalGrammar/IG-Inception-Layers
  Maintainer: C. Frantz (christopher.frantz@ntnu.no)
 */
@@ -50,6 +50,7 @@ IGCoreConstitutive {
   
   /* Component-specific options for constitutive functions */
   Component="(F) Constitutive Function" -> ConstitutiveFunction="(Definition) Definition";
+  Component="(F) Constitutive Function" -> ConstitutiveRuleType="Amendment";
   
   /* Policy Relationship Directionality */
   ConstitutiveFunction="Policy Relationship" -> PolicyRelationship="Policy of concern amends";
