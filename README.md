@@ -58,10 +58,11 @@ Preparation:
 
 Instructions for reformatting:
 * Open document in Notepad++
-* Press Ctrl-A to mark the complete document
-* Open the Search dialog (Ctrl-F) and switch to the 'Replace' tab
-* In the 'Find what:' field, enter: \s(?<=.{100})
-* In the 'Replace with:' field, enter: \n
+* Press *Ctrl-A* to mark the complete text
+* Open the Search dialog (*Ctrl-F*) and switch to the 'Replace' tab
+* In the 'Search Mode' area at the bottom of the 'Replace' tab, select 'Regular Expression'
+* In the 'Find what:' field, enter: *\s(?<=.{100})*
+* In the 'Replace with:' field, enter: *\n*
 * Click 'Replace All' button
 * Save the reformatted document
 
