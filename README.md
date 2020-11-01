@@ -83,6 +83,9 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
+ * IG-Inception v0.2.7 (02/11/2020, C. Frantz)
+   * Updated Context Taxonomy with Event category
+   * Comprehensive review of Context Taxonomy category descriptions
  * IG-Inception v0.2.6 (09/10/2020, C. Frantz)
    * Updated and renamed context taxonomy in line with Codebook revisions
    * Added Inception workaround description
