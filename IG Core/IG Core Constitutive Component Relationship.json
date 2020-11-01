@@ -316,25 +316,25 @@
       "type_description" : null,
       "tags" : [ {
         "tag_name" : "(Spatial) Direction",
-        "tag_description" : "Direction - References to directions, inclusion of intermediary locations (e.g., “via”)"
+        "tag_description" : "Direction - References to directions (e.g., towards), including intermediary locations (e.g., “via”)"
       }, {
         "tag_name" : "(Spatial) Location",
-        "tag_description" : "Location - References to specific locations"
+        "tag_description" : "Location - References to specific (e.g., Main Street) or abstract (e.g., on top of the building) locations"
       }, {
         "tag_name" : "(State) State",
-        "tag_description" : "State - References to a specific state"
+        "tag_description" : "State - References a specific state"
       }, {
         "tag_name" : "(State) State Transition/Process",
         "tag_description" : "State Transition/Process - References a change in state or a process reflecting change in state"
       }, {
         "tag_name" : "(Temporal) Beginning",
-        "tag_description" : "Indicates the beginning of a time frame"
+        "tag_description" : "Time Frame - Indicates the beginning of a time frame"
       }, {
         "tag_name" : "(Temporal) End",
-        "tag_description" : "Indicates the end of a time frame"
+        "tag_description" : "Time Frame - Indicates the end of a time frame"
       }, {
         "tag_name" : "(Temporal) Frequency",
-        "tag_description" : "Indicates frequency expression"
+        "tag_description" : "Temporal Frequency - Indicates recurrent activities (e.g., annually)"
       }, {
         "tag_name" : "(Temporal) Point in Time",
         "tag_description" : "Point in time - References to specific points in time"
@@ -348,8 +348,11 @@
         "tag_name" : "Domain",
         "tag_description" : "Domain - Conditions/Constraints applying to a specified activity, topical, or other conceptual realm."
       }, {
+        "tag_name" : "Event",
+        "tag_description" : "Event - References an event. In contrast to states (which can be long-lasting), events are instantaneous."
+      }, {
         "tag_name" : "Exception",
-        "tag_description" : "Exception - Expression of exception to general rule (e.g., \"unless ...\")"
+        "tag_description" : "Exception - Expression of exception to general rule (e.g., \"unless ...\"). It is a general category, applied if no other, more specific characterization holds."
       }, {
         "tag_name" : "Method",
         "tag_description" : "Method - Reference to means (e.g., artifact, tool) or manners (e.g., handshake) mediating activity"
@@ -532,7 +535,7 @@
   } ],
   "uiName" : "IG Core Constitutive Syntax",
   "type" : "span",
-  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG Profile Version: 0.2.6\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
+  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG Profile Version: 0.2.7\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,
