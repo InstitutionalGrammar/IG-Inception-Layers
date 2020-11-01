@@ -48,21 +48,22 @@ In addition to layers, the package contains constraints for the UI configuration
  
 ## Document Preparation Workaround (Multi-line annotations in Inception)
 
-A specific challenge of Inception-based coding is the expansion of multi-line annotations. Whenever the coder annotates a statement across line boundaries, the annotated text is expanded onto a single line, leading to extensive horizontal scrolling. This problem is specific to Inception and not related to the provided layers. A workaround to alleviate this is to preprocess documents with fixed line boundaries and adjust the editor settings accordingly.
+A specific challenge of Inception-based coding is the expansion of multi-line annotations. Whenever the coder annotates a statement across line boundaries, the annotated text is expanded onto a single line, requiring extensive horizontal scrolling in the coding process. This problem is specific to Inception and not related to the provided layers. A workaround to alleviate this is to preprocess documents with fixed line boundaries and adjust the editor settings accordingly.
 
 The following workaround addresses this by introducing a forced line break after 100 characters (this can be adjusted by substituting the corresponding value in the 'Find what:' field described below). Note that this can lead to arbitrary word separation, which may require further post-processing.
 
 Preparation:
 * Ensure the document is available in plain text format 
-* Create a copy of the original document prior to the following steps
+* Create a backup copy of the original document prior to performing the following steps
 
 Instructions for reformatting:
 * Open document in Notepad++
-* Press Ctrl-A to mark the complete document
-* Open Search dialog and switch to 'Replace' tab
-* In the 'Find what:' field, enter: \s(?<=.{100})
-* In the 'Replace with:' field, enter: \n
-* Click 'Replace All'
+* Press *Ctrl-A* to mark the complete text
+* Open the Search dialog (*Ctrl-F*) and switch to the 'Replace' tab
+* In the 'Search Mode' area at the bottom of the 'Replace' tab, select 'Regular Expression'
+* In the 'Find what:' field, enter: *\s(?<=.{100})*
+* In the 'Replace with:' field, enter: *\n*
+* Click 'Replace All' button
 * Save the reformatted document
 
 Adjust annotation editor setting:
