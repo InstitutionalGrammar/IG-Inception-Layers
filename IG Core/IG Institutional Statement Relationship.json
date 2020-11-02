@@ -250,8 +250,8 @@
         "tag_name" : "1 - Operational Level",
         "tag_description" : "Action and outcomes related to on-the-ground rules"
       }, {
-        "tag_name" : "2 - Collection Action Level",
-        "tag_description" : "Level at which operational level statements are created by means of collective action"
+        "tag_name" : "2 - Collective Choice Level",
+        "tag_description" : "Level at which operational level statements are created by means of collective choice"
       }, {
         "tag_name" : "3 - Constitutional Level",
         "tag_description" : "Level at which statements are created for use on the collective action level"
@@ -276,7 +276,7 @@
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"1\",\"value\":\"1 - Operational Level\"},{\"keyCombo\":\"2\",\"value\":\"2 - Collection Action Level\"},{\"keyCombo\":\"3\",\"value\":\"3 - Constitutional Level\"},{\"keyCombo\":\"4\",\"value\":\"4 - Meta-Constitutional Level\"}]}"
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"1\",\"value\":\"1 - Operational Level\"},{\"keyCombo\":\"2\",\"value\":\"2 - Collective Choice Level\"},{\"keyCombo\":\"3\",\"value\":\"3 - Constitutional Level\"},{\"keyCombo\":\"4\",\"value\":\"4 - Meta-Constitutional Level\"}]}"
   }, {
     "name" : "Statementtype",
     "tag_set" : {
@@ -318,7 +318,7 @@
   } ],
   "uiName" : "IG Institutional Statement",
   "type" : "span",
-  "description" : "Identifies and characterizes an institutional statement with respect to type, enforcement perspective, statement level. It further allows for the annotation of implied components.\r\n\r\nIG Profile Version: 0.2.6\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
+  "description" : "Identifies and characterizes an institutional statement with respect to type, enforcement perspective, statement level. It further allows for the annotation of implied components.\r\n\r\nIG Profile Version: 0.2.8\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,

@@ -3,7 +3,7 @@ Coding Guidelines for IG Inception Layers
 
 This file contains the operational annotation guidelines for annotating according to IG 2.0 in Inception. The IG Inception Layers, including all previous releases, can be found under https://github.com/InstitutionalGrammar/IG-Inception-Layers
 
-Version: 0.2.7 (C. Frantz)
+Version: 0.2.8 (C. Frantz)
 
 For general instruction on IG coding and underlying rationale, please refer to the coding guidelines under https://arxiv.org/abs/2008.08937. 
 

@@ -445,7 +445,7 @@
   } ],
   "uiName" : "IG Core Regulative Syntax",
   "type" : "span",
-  "description" : "Identifies institutional statement components for regulative statements\r\n\r\nIG Profile Version: 0.2.7\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
+  "description" : "Identifies institutional statement components for regulative statements\r\n\r\nIG Profile Version: 0.2.8\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,

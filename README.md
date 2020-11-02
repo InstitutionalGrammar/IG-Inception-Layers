@@ -83,6 +83,8 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
+ * IG-Inception v0.2.8 (in preparation)
+   * Fixed Statement level characterization (Collective Choice Level)
  * IG-Inception v0.2.7 (02/11/2020, C. Frantz)
    * Updated Context Taxonomy with Event category
    * Comprehensive review of Context Taxonomy category descriptions
