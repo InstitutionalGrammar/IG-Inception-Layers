@@ -34,20 +34,22 @@ Where component-level combinations exist (e.g., eat and drink) within a given st
 
 Logical relationships cannot only be used to capture relationships between the same component types, but also to link components hierarchically (e.g., objects and object properties, or properties and sub properties). Ensure to select the corresponding relationship type when linking individual components (e.g., 'Child-to-Parent Relationship').
 
-Specific component types allow further specific annotations (e.g., Context Taxonomy, Regulative Functions, Constitutive Functions) discussed as part of the general coding guidelines for IG 2.0 (see URL above).
+Specific component types allow further specific annotations (e.g., Context Taxonomy, Regulative Functions, Constitutive Functions) discussed as part of the general coding guidelines for IG 2.0 (see URL above). Entities can further be annotated as animate, inanimate, and abstract or concrete.
 
 Where components of a given institutional statement are implicit or exist outside an institutional statement, indicate those in the 'IG Institutional Statement' layer as part of statement-level annotation.
 
-Specific considerations for complex data structures or policy references that coders may find embedded in institutional statement components are highlighted in the following.
+Specific considerations for complex data structures, collections, equations, or policy references that coders may find embedded in institutional statement components are highlighted in the following.
 
-Complex data structures:
-------------------------
+Complex data structures, Collections & Equations:
+-------------------------------------------------
 
 Where individual components contain complex regular structures (e.g., lists, or quantitative information), those can be decomposed using the 'IG Collection' layer and the 'IG Complex Data Structure' layer, respectively. The purpose is to make commonly found textual structures machine-readable.
 
-The 'IG Collection' layer identifies elements in lists (e.g., item1 AND item2, etc.) or other logical relationships (e.g., item1 AND item2 XOR item3, etc.). It is further possible to indicate precedence amongst the relationships, and further indicate whether the listing is exhaustive.
+The 'IG Collection' layer identifies elements in lists (e.g., item1 AND item2, etc.) or other logical relationships (e.g., item1 AND item2 XOR item3, etc.). It is further possible to indicate precedence amongst the relationships, and further indicate whether the listing is exhaustive. Elements identify in the collection can further be annotated as abstract or concrete, as well as indicating embedded institutional statements.
 
 The 'IG Complex Data Structure' layer allows for the decomposition of elementary values (e.g., items in a list) in an extensible schema building on the base structure QUALIFIER, COMPARATOR, QUANTITY, UNIT, OBJECT, OBJECT PROPERTY (components can be omitted where suitable). Example: "a bit (qualifier) more than (comparator) 10 (quantity) tons (unit) high-quality (object property) building material (object)"
+
+The 'IG Equation' layer allows the specification of equation components (e.g., left-hand side, right-hand side) and their relationship (by drawing links between both equation sides). Alternatively, an entire expression as inferred from textual form, can be explicitly provided.
 
 Policy References:
 ------------------
