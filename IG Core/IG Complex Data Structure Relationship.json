@@ -1,6 +1,72 @@
 [ {
   "name" : "webanno.custom.IGComplexDataRelationship",
-  "features" : [ ],
+  "features" : [ {
+    "name" : "LogicalRelationship",
+    "tag_set" : {
+      "name" : "IG Component Relationships",
+      "typeUiName" : null,
+      "description" : "Logical Component Relationships",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "AND",
+        "tag_description" : "Indicates AND relationship, i.e., conjunction of components. The relationship is undirected."
+      }, {
+        "tag_name" : "AND NOT",
+        "tag_description" : "Describes a combination of statements, where the occurrence of the action specified in the first statement is combined with the non-occurrence of the action specified in the second statement. The relationship is directed; the target is the non-occurring action statement."
+      }, {
+        "tag_name" : "AND/OR",
+        "tag_description" : "Indicates AND/OR relationship (OR) in which both components may apply, or either one of those, i.e., an inclusive disjunction. The relationship is undirected."
+      }, {
+        "tag_name" : "Child-to-Parent Relationship (Target is Parent)",
+        "tag_description" : "Identifies a parent-child relationship between elements, with the parent being the element defined or composed, and the child its component or property.\r\nThis relationship type applies to various forms of annotations, but most notably to \r\n- component-level combinations (logical combinations of same components)\r\n- relationships between objects and properties, and\r\n- properties and sub-properties (Object-Property Hierarchy)."
+      }, {
+        "tag_name" : "NOR",
+        "tag_description" : "Describes a NEITHER-NOR (NOR) relationship of components, where the non-occurrence of the first component is combined with the non-occurrence of the second component of the same type. The relationship is undirected."
+      }, {
+        "tag_name" : "XOR",
+        "tag_description" : "Indicates an EITHER-OR (XOR) relationship, i.e., exclusive disjunction. The relationship is undirected."
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Logical Relationship",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Describes the logical relationship between elements.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND\"},{\"keyCombo\":\"o\",\"value\":\"AND/OR\"},{\"keyCombo\":\"p\",\"value\":\"Child-to-Parent Relationship (Target is Parent)\"},{\"keyCombo\":\"x\",\"value\":\"XOR\"},{\"keyCombo\":\"m\",\"value\":\"AND NOT\"},{\"keyCombo\":\"n\",\"value\":\"NOR\"}]}"
+  }, {
+    "name" : "PrecedenceofElementRelationships",
+    "tag_set" : null,
+    "uiName" : "Precedence of Element Relationships",
+    "type" : "uima.cas.Integer",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates precedence among component relationships. Lower values imply lower precedence/priority.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"limited\":true,\"minimum\":1,\"maximum\":99,\"editorType\":\"SPINNER\"}"
+  } ],
   "uiName" : "IG Complex Data Structure Relationship",
   "type" : "relation",
   "description" : "Links components of complex data structure to ensure association",
@@ -21,7 +87,8 @@
   "multiple_tokens" : true,
   "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
-  "on_click_javascript_action" : null
+  "on_click_javascript_action" : null,
+  "traits" : null
 }, {
   "name" : "webanno.custom.IGComplexDataStructure",
   "features" : [ {
@@ -71,6 +138,25 @@
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
     "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+  }, {
+    "name" : "InferredComponentValues",
+    "tag_set" : null,
+    "uiName" : "Inferred Component Value(s)",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates the inferred value(s) of the component. Where multiple values are inferred, separate those by '|'.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
   } ],
   "uiName" : "IG Complex Data Structure",
   "type" : "span",
@@ -90,5 +176,6 @@
   "multiple_tokens" : true,
   "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
-  "on_click_javascript_action" : null
+  "on_click_javascript_action" : null,
+  "traits" : null
 } ]

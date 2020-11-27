@@ -34,6 +34,9 @@ The layer files included in this release are the following (where containing mul
  * IG Core Regulative Component Relationship - this layer contains the IG Core regulative component specifications, alongside additional Context taxonomies. This file contains the following layers:
    * *IG Core Regulative Syntax* (containing syntactic component annotations for regulative institutional statements, along with context type taxonomy and further relevant taxonomies)
    * *IG Core Regulative Component Relationship* (containing logical relationship annotations amongst institutional grammar components)
+ * IG Equation Relationship - this layer provides the ability to annotate implied equations by identifying individual sides of the expression and their relationship. This file contains the following layers:
+   * *IG Equation* (containing specification for left-hand, right-hand side, any side (if order does not matter), or full equation)
+   * *IG Equation Relationship* (containing indication of relational operators, precedence, as well as additional qualification of relationship)
  * IG Institutional Statement Relationship - this layer facilitates the representation of relationships amongst institutional statements. This file contains the following layers:
    * *IG Institutional Statement* (containing institutional statement types and characterization by rule type, statement nature, etc.)
    * *IG Institutional Statement Relationship* (containing logical relationship annotations amongst institutional statements)
@@ -83,7 +86,10 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
- * IG-Inception v0.2.8 (in preparation)
+ * IG-Inception v0.2.8 (28/11/2020, C. Frantz)
+   * Added Equation layer to allow annotation of embedded equations
+   * Harmonized logical operators across Regulative, Constitutive and Collection layers
+   * Added annotation of entities as abstract or concrete
    * Fixed Statement level characterization (Collective Choice Level)
  * IG-Inception v0.2.7 (02/11/2020, C. Frantz)
    * Updated Context Taxonomy with Event category

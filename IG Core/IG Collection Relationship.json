@@ -1,50 +1,6 @@
 [ {
   "name" : "webanno.custom.IGElementRelationship",
   "features" : [ {
-    "name" : "ElementRelationship",
-    "tag_set" : {
-      "name" : "IG Collection Relationships",
-      "typeUiName" : null,
-      "description" : "Collection Element Relationships to decompose collections into element and collection entities",
-      "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
-      "tags" : [ {
-        "tag_name" : "AND Relationship",
-        "tag_description" : "Identifies elements as AND-combined"
-      }, {
-        "tag_name" : "NOR Relationship",
-        "tag_description" : "Identifies elements as NEITHER/NOR (NOR)-combined"
-      }, {
-        "tag_name" : "OR Relationship",
-        "tag_description" : "Identifies elements as AND/OR-combined"
-      }, {
-        "tag_name" : "Parent-Child Relationship (Target is Parent)",
-        "tag_description" : "Identifies a parent-child relationship between elements, with the parent being the element defined or composed, and the child as a component."
-      }, {
-        "tag_name" : "XOR Relationship",
-        "tag_description" : "Identifies elements as EITHER/OR (XOR)-combined"
-      } ],
-      "create_tag" : true
-    },
-    "uiName" : "Element Relationship",
-    "type" : "uima.cas.String",
-    "enabled" : true,
-    "visible" : true,
-    "include_in_hover" : false,
-    "required" : false,
-    "remember" : false,
-    "hideUnconstraintFeature" : false,
-    "description" : "Indicate element relationship",
-    "project_name" : "IG-Inception-Layer Development",
-    "multi_value_mode" : "NONE",
-    "link_mode" : "NONE",
-    "link_type_name" : null,
-    "link_type_role_feature_name" : null,
-    "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND Relationship\"},{\"keyCombo\":\"o\",\"value\":\"OR Relationship\"},{\"keyCombo\":\"p\",\"value\":\"Parent-Child Relationship (Target is Parent)\"},{\"keyCombo\":\"x\",\"value\":\"XOR Relationship\"},{\"keyCombo\":\"n\",\"value\":\"NOR Relationship\"}]}"
-  }, {
     "name" : "Exhaustive",
     "tag_set" : null,
     "uiName" : "Exhaustive",
@@ -63,6 +19,53 @@
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
     "traits" : null
+  }, {
+    "name" : "ElementRelationship",
+    "tag_set" : {
+      "name" : "IG Component Relationships",
+      "typeUiName" : null,
+      "description" : "Logical Component Relationships",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "AND",
+        "tag_description" : "Indicates AND relationship, i.e., conjunction of components. The relationship is undirected."
+      }, {
+        "tag_name" : "AND NOT",
+        "tag_description" : "Describes a combination of statements, where the occurrence of the action specified in the first statement is combined with the non-occurrence of the action specified in the second statement. The relationship is directed; the target is the non-occurring action statement."
+      }, {
+        "tag_name" : "AND/OR",
+        "tag_description" : "Indicates AND/OR relationship (OR) in which both components may apply, or either one of those, i.e., an inclusive disjunction. The relationship is undirected."
+      }, {
+        "tag_name" : "Child-to-Parent Relationship (Target is Parent)",
+        "tag_description" : "Identifies a parent-child relationship between elements, with the parent being the element defined or composed, and the child its component or property.\r\nThis relationship type applies to various forms of annotations, but most notably to \r\n- component-level combinations (logical combinations of same components)\r\n- relationships between objects and properties, and\r\n- properties and sub-properties (Object-Property Hierarchy)."
+      }, {
+        "tag_name" : "NOR",
+        "tag_description" : "Describes a NEITHER-NOR (NOR) relationship of components, where the non-occurrence of the first component is combined with the non-occurrence of the second component of the same type. The relationship is undirected."
+      }, {
+        "tag_name" : "XOR",
+        "tag_description" : "Indicates an EITHER-OR (XOR) relationship, i.e., exclusive disjunction. The relationship is undirected."
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Logical Relationship",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicate logical relationship between elements",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"AND\"},{\"keyCombo\":\"m\",\"value\":\"AND NOT\"},{\"keyCombo\":\"o\",\"value\":\"AND/OR\"},{\"keyCombo\":\"p\",\"value\":\"Child-to-Parent Relationship (Target is Parent)\"},{\"keyCombo\":\"n\",\"value\":\"NOR\"},{\"keyCombo\":\"x\",\"value\":\"XOR\"}]}"
   }, {
     "name" : "PrecedenceOrder",
     "tag_set" : null,
@@ -103,10 +106,46 @@
   "multiple_tokens" : true,
   "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
-  "on_click_javascript_action" : null
+  "on_click_javascript_action" : null,
+  "traits" : null
 }, {
   "name" : "webanno.custom.IGElement",
   "features" : [ {
+    "name" : "AbstractvsConcrete",
+    "tag_set" : {
+      "name" : "IG Entity Characteristic",
+      "typeUiName" : null,
+      "description" : "Indicates the nature of the entity characteristics",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "abstract",
+        "tag_description" : "Signals an abstract entity (e.g., thought, institutional statement, etc.)"
+      }, {
+        "tag_name" : "concrete",
+        "tag_description" : "Indicates a concrete physical entity"
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Abstract vs. Concrete",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates whether entity is abstract (e.g., belief) or concrete (physical).",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+  }, {
     "name" : "ElementType",
     "tag_set" : {
       "name" : "IG Collection Element Type",
@@ -119,6 +158,9 @@
       "tags" : [ {
         "tag_name" : "Action",
         "tag_description" : "Identifies element type as action"
+      }, {
+        "tag_name" : "Collection",
+        "tag_description" : null
       }, {
         "tag_name" : "Object",
         "tag_description" : "Identifies element type as object"
@@ -144,6 +186,25 @@
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
     "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"Action\"},{\"keyCombo\":\"o\",\"value\":\"Object\"},{\"keyCombo\":\"P\",\"value\":\"Property\"}]}"
+  }, {
+    "name" : "EmbedsInstitutionalStatement",
+    "tag_set" : null,
+    "uiName" : "Embeds Institutional Statement",
+    "type" : "uima.cas.Boolean",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates whether the component is or embeds an institutional statement in its own right.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : null
   } ],
   "uiName" : "IG Collection",
   "type" : "span",
@@ -163,5 +224,6 @@
   "multiple_tokens" : true,
   "project_name" : "IG-Inception-Layer Development",
   "linked_list_behavior" : false,
-  "on_click_javascript_action" : null
+  "on_click_javascript_action" : null,
+  "traits" : null
 } ]

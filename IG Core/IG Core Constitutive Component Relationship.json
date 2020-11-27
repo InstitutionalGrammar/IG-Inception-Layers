@@ -130,6 +130,41 @@
 }, {
   "name" : "webanno.custom.IGCoreConstitutiveSyntax",
   "features" : [ {
+    "name" : "AbstractvsConcrete",
+    "tag_set" : {
+      "name" : "IG Entity Characteristic",
+      "typeUiName" : null,
+      "description" : "Indicates the nature of the entity characteristics",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "abstract",
+        "tag_description" : "Signals an abstract entity (e.g., thought, institutional statement, etc.)"
+      }, {
+        "tag_name" : "concrete",
+        "tag_description" : "Indicates a concrete physical entity"
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Abstract vs. Concrete",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates entity as either abstract (e.g., conceptual) or concrete (physical) in kind.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+  }, {
     "name" : "AdditionalLabels",
     "tag_set" : null,
     "uiName" : "Additional Label(s)",

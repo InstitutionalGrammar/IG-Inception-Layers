@@ -1,0 +1,194 @@
+[ {
+  "name" : "webanno.custom.IGEquationRelationship",
+  "features" : [ {
+    "name" : "PrecedenceofRelationships",
+    "tag_set" : null,
+    "uiName" : "Precedence of Relationships",
+    "type" : "uima.cas.Integer",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates precedence among equations. Lower values imply lower precedence/priority.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"limited\":true,\"minimum\":1,\"maximum\":99,\"editorType\":\"SPINNER\"}"
+  }, {
+    "name" : "Qualification",
+    "tag_set" : null,
+    "uiName" : "Qualification",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Where needed, additional qualifications of the relationship can be provided, e.g., relationship as expressed in original text.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+  }, {
+    "name" : "RelationalOperator",
+    "tag_set" : {
+      "name" : "IG Relational Operators",
+      "typeUiName" : null,
+      "description" : "Relational operators as relevant for IG Equation layer",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "approximately equals (~=)",
+        "tag_description" : "Indicates that the left-hand-side value approximately (but not necessarily exactly) equals the right-hand-side value."
+      }, {
+        "tag_name" : "equals (=)",
+        "tag_description" : "Indicates that the left-hand-side value equals the right-hand-side value."
+      }, {
+        "tag_name" : "greater (>)",
+        "tag_description" : "Indicates that the left-hand-side value is greater than the right-hand-side value."
+      }, {
+        "tag_name" : "greater equals (>=)",
+        "tag_description" : "Indicates that the left-hand-side value is greater or equals the right-hand-side value."
+      }, {
+        "tag_name" : "smaller equals (<=)",
+        "tag_description" : "Indicates that the left-hand-side value is smaller or equals the right-hand-side value."
+      }, {
+        "tag_name" : "smaller than (<)",
+        "tag_description" : "Indicates that the left-hand-side value is smaller than the right-hand-side value."
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Relational Operator",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates a relational operator between annotated sides of equation.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"a\",\"value\":\"smaller than (<)\"},{\"keyCombo\":\"s\",\"value\":\"smaller equals (<=)\"},{\"keyCombo\":\"d\",\"value\":\"approximately equals (~=)\"},{\"keyCombo\":\"f\",\"value\":\"equals (=)\"},{\"keyCombo\":\"g\",\"value\":\"greater equals (>=)\"},{\"keyCombo\":\"h\",\"value\":\"greater (>)\"}]}"
+  } ],
+  "uiName" : "IG Equation Relationship",
+  "type" : "relation",
+  "description" : "Indicates equation relationships",
+  "enabled" : true,
+  "built_in" : false,
+  "readonly" : false,
+  "attach_type" : {
+    "name" : "webanno.custom.IGEquation"
+  },
+  "attach_feature" : null,
+  "allow_stacking" : true,
+  "cross_sentence" : true,
+  "show_hover" : true,
+  "anchoring_mode" : "TOKENS",
+  "overlap_mode" : "ANY_OVERLAP",
+  "validation_mode" : "ALWAYS",
+  "lock_to_token_offset" : false,
+  "multiple_tokens" : true,
+  "project_name" : "IG-Inception-Layer Development",
+  "linked_list_behavior" : false,
+  "on_click_javascript_action" : null,
+  "traits" : null
+}, {
+  "name" : "webanno.custom.IGEquation",
+  "features" : [ {
+    "name" : "EquationSide",
+    "tag_set" : {
+      "name" : "IG Equation Sides",
+      "typeUiName" : null,
+      "description" : "Sides of equation used in IG Equation Layer",
+      "language" : null,
+      "type" : null,
+      "type_name" : null,
+      "type_description" : null,
+      "tags" : [ {
+        "tag_name" : "Any Side",
+        "tag_description" : "Indicates any side of the equation (where order does not matter or is not clear)."
+      }, {
+        "tag_name" : "Full Equation",
+        "tag_description" : "Indicates that the annotated text contains the complete expression (i.e., both sides)."
+      }, {
+        "tag_name" : "Left-hand Side",
+        "tag_description" : "Indicates the left-hand side of the equation."
+      }, {
+        "tag_name" : "Right-hand Side",
+        "tag_description" : "Indicates the right-hand side of the equation."
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Equation Side",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates left- or right-hand side of an equation. Where order does not matter, select \"any side\".",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"l\",\"value\":\"Left-hand Side\"},{\"keyCombo\":\"r\",\"value\":\"Right-hand Side\"},{\"keyCombo\":\"a\",\"value\":\"Any Side\"},{\"keyCombo\":\"E\",\"value\":\"Full Equation\"}]}"
+  }, {
+    "name" : "InferredExpression",
+    "tag_set" : null,
+    "uiName" : "Inferred Expression",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "If not explicit in text, or hard to extract, this field holds the inferred expression of the equation side, or the equation as a whole (depending on indication of equation side), represented in pseudocode or equation form.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+  } ],
+  "uiName" : "IG Equation",
+  "type" : "span",
+  "description" : "Allows the encoding of equations represented in institutional statements or other coded text.",
+  "enabled" : true,
+  "built_in" : false,
+  "readonly" : false,
+  "attach_type" : null,
+  "attach_feature" : null,
+  "allow_stacking" : true,
+  "cross_sentence" : true,
+  "show_hover" : true,
+  "anchoring_mode" : "TOKENS",
+  "overlap_mode" : "ANY_OVERLAP",
+  "validation_mode" : "ALWAYS",
+  "lock_to_token_offset" : false,
+  "multiple_tokens" : true,
+  "project_name" : "IG-Inception-Layer Development",
+  "linked_list_behavior" : false,
+  "on_click_javascript_action" : null,
+  "traits" : null
+} ]
