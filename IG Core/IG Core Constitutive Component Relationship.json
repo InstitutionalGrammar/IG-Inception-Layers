@@ -235,9 +235,6 @@
         "tag_name" : "(Cex) Execution Constraint",
         "tag_description" : "Execution constraints describe qualifications of the constitutive function or offer further contextual characterization."
       }, {
-        "tag_name" : "(D) Deontic",
-        "tag_description" : "A prescriptive operator that describes whether the Aim (for regulative statements) of an institutional statement is permitted (e.g., may), obliged (e.g., shall, must), or forbidden (e.g., shall not, must not). For constitutive statements, the deontic parameterizes the constitutive function."
-      }, {
         "tag_name" : "(E) Constituted Entity",
         "tag_description" : "Entity that is defined or modified by constitutive statement"
       }, {
@@ -246,6 +243,9 @@
       }, {
         "tag_name" : "(F) Constitutive Function",
         "tag_description" : "Functionally constitutes a Constituted Entity (with or without reference to constituting properties)"
+      }, {
+        "tag_name" : "(M) Modal",
+        "tag_description" : "A modal operator that signals the necessity (often: shall) or (im-)possibility (often: may) of the action captured in the constitutive function in an epistemic sense (in contrast to the deontic sense for regulative statements)."
       }, {
         "tag_name" : "(P) Constituting Property",
         "tag_description" : "Constituting Properties capture related or constituent properties that are linked to the constituted entity via the constituting function. It is polymorphic in nature and dependent on the applied constitutive function."
@@ -270,7 +270,7 @@
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"d\",\"value\":\"(D) Deontic\"},{\"keyCombo\":\"e\",\"value\":\"(E) Constituted Entity\"},{\"keyCombo\":\"r\",\"value\":\"(E, prop) Constituted Entity Property\"},{\"keyCombo\":\"f\",\"value\":\"(F) Constitutive Function\"},{\"keyCombo\":\"p\",\"value\":\"(P) Constituting Property\"},{\"keyCombo\":\"o\",\"value\":\"(P, prop) Constituting Property Property\"},{\"keyCombo\":\"c\",\"value\":\"(Cac) Activation Condition\"},{\"keyCombo\":\"x\",\"value\":\"(Cex) Execution Constraint\"}]}"
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"e\",\"value\":\"(E) Constituted Entity\"},{\"keyCombo\":\"r\",\"value\":\"(E, prop) Constituted Entity Property\"},{\"keyCombo\":\"f\",\"value\":\"(F) Constitutive Function\"},{\"keyCombo\":\"p\",\"value\":\"(P) Constituting Property\"},{\"keyCombo\":\"o\",\"value\":\"(P, prop) Constituting Property Property\"},{\"keyCombo\":\"c\",\"value\":\"(Cac) Activation Condition\"},{\"keyCombo\":\"x\",\"value\":\"(Cex) Execution Constraint\"},{\"keyCombo\":\"m\",\"value\":\"(M) Modal\"}]}"
   }, {
     "name" : "ConstitutiveFunction",
     "tag_set" : {
@@ -570,7 +570,7 @@
   } ],
   "uiName" : "IG Core Constitutive Syntax",
   "type" : "span",
-  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG Profile Version: 0.2.8\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
+  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG Profile Version: 0.2.9\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,

@@ -3,7 +3,7 @@ Coding Guidelines for IG Inception Layers
 
 This file contains the operational annotation guidelines for annotating according to IG 2.0 in Inception. The IG Inception Layers, including all previous releases, can be found under https://github.com/InstitutionalGrammar/IG-Inception-Layers
 
-Version: 0.2.8 (C. Frantz)
+Version: 0.2.9 (C. Frantz)
 
 For general instruction on IG coding and underlying rationale, please refer to the coding guidelines under https://arxiv.org/abs/2008.08937. 
 
@@ -24,9 +24,11 @@ Syntax-level annotation:
 On syntax level, the following procedural steps apply:
 
 - Identify atomic institutional statements by identifying elementary components of the statement
-- Identify syntactic structure of Institutional Statement as either in ABDICO or PDFECO form
+- Identify syntactic structure of Institutional Statement as either in ABDICO or PMFECO form
 - Choose corresponding layer ('IG Core Regulative Syntax'; 'IG Core Constitutive Syntax')
 - Commence annotation of token and clauses with the corresponding components
+
+Note: To facilitate efficient coding, consider the use of keybindings for the individual component selection (e.g., 'A' for Attributes).
 
 Where nested institutional statements exist, complete the annotation on a given level, before revisiting nested components in a second iteration, e.g., annotating a potentially nested activation condition as activation conditions first, before continuing with the lower-level annotation (e.g., decomposing embedded nested clause into individual components).
 
