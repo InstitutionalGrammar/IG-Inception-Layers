@@ -5,6 +5,8 @@ This file contains the operational annotation guidelines for annotating accordin
 
 Version: 0.2.9 (C. Frantz)
 
+The latest version of the Inception layers is available under https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases
+
 For general instruction on IG coding and underlying rationale, please refer to the coding guidelines under https://arxiv.org/abs/2008.08937. 
 
 Introduction:
@@ -65,7 +67,7 @@ Statement-level annotation:
 
 - Identify statement types for all identified statements incrementally (including overlapping or statements nested statements)
 - Choose 'IG Institutional Statement' Layer
-- Annotate all statements (including nested ones) and mark those as regulative or constitutive respectively. 
+- Annotate all statements (including nested ones) and mark those as regulative or constitutive respectively, and indicate whether they are nested ('Nested Statement' checkbox). 
 - Draw links between statements where existing (e.g., logical relationships). Where vertically nested (i.e., or else relationship exists), indicate whether statement is monitored or consequential (where not annotated, the statement is presumed monitored). Populate further properties where relevant for each statement, such as IAD rule type and level.
 - Where components are implicit (e.g., Attribute) add indicate those in the 'IG Institutional Statement' layer under 'Implicit Components' by listing those in the format COMPONENT=VALUE|COMPONENT=VALUE| ... (e.g., 'A=Actor|D=must').
 - Where components exist outside the institutional statement (e.g., in another statement), resolve those in the 'IG Institutional Statement' layer under 'External Component Reference' by indicating the component name (e.g., Attributes), confirm by clicking 'Add' and clicking on target token outside institutional statement.

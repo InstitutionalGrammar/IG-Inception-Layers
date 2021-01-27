@@ -187,6 +187,25 @@
     "link_type_target_feature_name" : null,
     "traits" : "{\"multipleRows\":true,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":2,\"keyBindings\":[]}"
   }, {
+    "name" : "NestedStatement",
+    "tag_set" : null,
+    "uiName" : "Nested Statement",
+    "type" : "uima.cas.Boolean",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates whether the statement is nested in another statement component (e.g., activation condition containing a nested statement (e.g., action as precondition), complex object containing nested statement (e.g., belief)).",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : null
+  }, {
     "name" : "RuleType",
     "tag_set" : {
       "name" : "IG Rule Type",
