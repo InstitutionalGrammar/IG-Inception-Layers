@@ -86,8 +86,9 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 
 ## Version History
  
- * IG-Inception v0.2.9 (in preparation)
+ * IG-Inception v0.2.9 (27/01/2021, C. Frantz)
    * Renamed Deontic to Modal in Constitutive Syntax layer
+   * Added explicit indication flag for nested statements in Institutional Statement layer
  * IG-Inception v0.2.8 (28/11/2020, C. Frantz)
    * Added Equation layer to allow annotation of embedded equations
    * Harmonized logical operators across Regulative, Constitutive and Collection layers
