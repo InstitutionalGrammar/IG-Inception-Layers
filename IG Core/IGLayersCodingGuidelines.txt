@@ -1,13 +1,13 @@
 Coding Guidelines for IG Inception Layers
 -----------------------------------------
 
-This file contains the operational annotation guidelines for annotating according to IG 2.0 in Inception. The IG Inception Layers, including all previous releases, can be found under https://github.com/InstitutionalGrammar/IG-Inception-Layers
+This file contains the operational annotation guidelines for annotating according to the Institutional Grammar 2.0 (IG 2.0) in Inception. The IG Inception Layers, including all previous releases, can be found under https://github.com/InstitutionalGrammar/IG-Inception-Layers
 
-Version: 0.2.9 (C. Frantz)
+Version: 0.3.0 (C. Frantz)
 
 The latest version of the Inception layers is available under https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases
 
-For general instruction on IG coding and underlying rationale, please refer to the coding guidelines under https://arxiv.org/abs/2008.08937. 
+For general instruction on IG coding and underlying rationale, please refer to the conceptual introduction of IG 2.0 (https://doi.org/10.1111/padm.12719), or the IG 2.0 Coding Guidelines under https://arxiv.org/abs/2008.08937. 
 
 Introduction:
 -------------
@@ -16,14 +16,14 @@ The coding of institutional statements occur on two levels, the syntax level and
 
 The syntax level annotation focuses on the annotation of specific tokens or clauses with the associated IG component. In addition it affords intra-statement relationship (e.g., relationships between components of the statement, such as component-level combinations). 
 
-The statement level identifies the scope of the statements more generally and resolves inter-statement relationships amongst the statements, such as horizontal (e.g., AND, OR) and vertical nesting (e.g., monitored, consequential), as well as providing references to implied components, or components outside a given statement.
+The statement level identifies the scope of the statements more generally and resolves inter-statement relationships amongst the statements, such as horizontal (e.g., AND, OR) and vertical nesting (e.g., monitored, consequential), nesting of statements in components (e.g., statements nested in activation conditions), as well as providing references to implied components, or components outside a given statement.
 
 The principal approaches for both coding levels are outlined below (and provide a basis for augmentation for further project-specific guidelines). 
 
-Syntax-level annotation:
+Component-level annotation:
 ------------------------
 
-On syntax level, the following procedural steps apply:
+On component syntax level, the following procedural steps apply:
 
 - Identify atomic institutional statements by identifying elementary components of the statement
 - Identify syntactic structure of Institutional Statement as either in ABDICO or PMFECO form
@@ -32,13 +32,13 @@ On syntax level, the following procedural steps apply:
 
 Note: To facilitate efficient coding, consider the use of keybindings for the individual component selection (e.g., 'A' for Attributes).
 
-Where nested institutional statements exist, complete the annotation on a given level, before revisiting nested components in a second iteration, e.g., annotating a potentially nested activation condition as activation conditions first, before continuing with the lower-level annotation (e.g., decomposing embedded nested clause into individual components).
+Where nested institutional statements exist, complete the annotation on a given level, before revisiting nested components in a second iteration, e.g., annotating a potentially nested activation condition as activation conditions first, before continuing with the lower-level annotation (e.g., decomposing embedded nested clause into individual components). Remember to annotate the component that contains a nested statement by indicating the 'Embeds Nested Statement' flag.
 
 Where component-level combinations exist (e.g., eat and drink) within a given statement, annotate those individually as component (e.g., aim), and draw a link from one component to the other. Indicate the logical operator in the link (e.g., AND), as well as precedence (if multiple logical relationships exist).
 
-Logical relationships cannot only be used to capture relationships between the same component types, but also to link components hierarchically (e.g., objects and object properties, or properties and sub properties). Ensure to select the corresponding relationship type when linking individual components (e.g., 'Child-to-Parent Relationship').
+Logical relationships cannot only be used to capture relationships between the same component types, but also to link components hierarchically (e.g., objects and object properties, or properties and sub properties). Ensure to select the corresponding relationship type when linking individual components (e.g., 'Child-to-Parent Relationship'). Note: Where logical relationships are embedded in an expression, but it is infeasible to separate the the components unambigously, this can be indicated for a given component ('Embeds Logical Combination' flag). Resolution is then subject to downstream processing.
 
-Specific component types allow further specific annotations (e.g., Context Taxonomy, Regulative Functions, Constitutive Functions) discussed as part of the general coding guidelines for IG 2.0 (see URL above). Entities can further be annotated as animate, inanimate, and abstract or concrete.
+Specific component types allow further specific annotations (e.g., Context Taxonomy, Regulative Functions, Constitutive Functions) discussed as part of the general Coding Guidelines for IG 2.0 (see URL above). Entities can further be annotated as animate, inanimate, and abstract or concrete.
 
 Where components of a given institutional statement are implicit or exist outside an institutional statement, indicate those in the 'IG Institutional Statement' layer as part of statement-level annotation.
 
@@ -46,6 +46,8 @@ Specific considerations for complex data structures, collections, equations, or 
 
 Complex data structures, Collections & Equations:
 -------------------------------------------------
+
+Note: This section is subject to ongoing evaluation and likely to experience refinements/extensions in the future.
 
 Where individual components contain complex regular structures (e.g., lists, or quantitative information), those can be decomposed using the 'IG Collection' layer and the 'IG Complex Data Structure' layer, respectively. The purpose is to make commonly found textual structures machine-readable.
 
@@ -67,7 +69,7 @@ Statement-level annotation:
 
 - Identify statement types for all identified statements incrementally (including overlapping or statements nested statements)
 - Choose 'IG Institutional Statement' Layer
-- Annotate all statements (including nested ones) and mark those as regulative or constitutive respectively, and indicate whether they are nested ('Nested Statement' checkbox). 
+- Annotate all statements (including nested ones) and mark those as regulative or constitutive respectively, and indicate whether they are nested ('Nested Statement' checkbox). When identifying nested statements, consider the annotation as Observation of Fact/State or Action (as an alternative to regulative and constitutive statements) if such statements express specific states/actions, as opposed to constituting entities or regulating behavior.
 - Draw links between statements where existing (e.g., logical relationships). Where vertically nested (i.e., or else relationship exists), indicate whether statement is monitored or consequential (where not annotated, the statement is presumed monitored). Populate further properties where relevant for each statement, such as IAD rule type and level.
 - Where components are implicit (e.g., Attribute) add indicate those in the 'IG Institutional Statement' layer under 'Implicit Components' by listing those in the format COMPONENT=VALUE|COMPONENT=VALUE| ... (e.g., 'A=Actor|D=must').
 - Where components exist outside the institutional statement (e.g., in another statement), resolve those in the 'IG Institutional Statement' layer under 'External Component Reference' by indicating the component name (e.g., Attributes), confirm by clicking 'Add' and clicking on target token outside institutional statement.

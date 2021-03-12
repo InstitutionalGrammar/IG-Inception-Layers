@@ -23,12 +23,8 @@
     "name" : "LogicalRelationship",
     "tag_set" : {
       "name" : "IG Statement Relationships",
-      "typeUiName" : null,
       "description" : "Horizontal, Vertical, or Component-level Nesting Relationships between Institutional Statements",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "AND Combination (Horizontal Nesting)",
         "tag_description" : "AND combination of institutional statements on a given nesting level"
@@ -95,12 +91,8 @@
     "name" : "StatementEnforcementPerspective",
     "tag_set" : {
       "name" : "IG Statement Perspective",
-      "typeUiName" : null,
       "description" : "Indicates the perspective of an institutional statement emphasizing a non-sanctioning regulative or constitutive statement (monitored statement), or a statement containing enforcement characteristics (consequential statement).",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "1 - Monitored Statement",
         "tag_description" : "Indicates a monitored statement. A monitored statement describes regulated statement content whose non-compliance is (potentially) sanctioned by another entity specified in a consequential statement.\r\n\r\nExample: Citizen must comply (Statement 1), or else police officer must fine (Statement 2), or else authority must review police officer conduct (Statement 3).\r\nStatement 1 is exclusively monitored (it does not contain any sanctioning component); Statement 2 is both monitored as well as consequential (it describes both a regulated action as well as sanctions for another actor's actions); Statement 3 is consequential only (no further oversight is specified)."
@@ -197,7 +189,7 @@
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
-    "description" : "Indicates whether the statement is nested in another statement component (e.g., activation condition containing a nested statement (e.g., action as precondition), complex object containing nested statement (e.g., belief)).",
+    "description" : "Indicates whether the statement is nested in another statement component (e.g., activation condition containing a nested statement (e.g., action as precondition), complex object containing nested statement (e.g., belief)). Note that this annotation complements the nesting indication in the corresponding component that embeds this statement.",
     "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
@@ -209,12 +201,8 @@
     "name" : "RuleType",
     "tag_set" : {
       "name" : "IG Rule Type",
-      "typeUiName" : null,
       "description" : "Indicates rule type of institutional statement",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "Aggregation",
         "tag_description" : "Rule indicating the number and nature of participants involved in a given operational- or collective-choice decision"
@@ -259,12 +247,8 @@
     "name" : "StatementLevel",
     "tag_set" : {
       "name" : "IG Statement Level",
-      "typeUiName" : null,
       "description" : "Indicates the level at which the institutional statement operates",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "1 - Operational Level",
         "tag_description" : "Action and outcomes related to on-the-ground rules"
@@ -300,18 +284,17 @@
     "name" : "Statementtype",
     "tag_set" : {
       "name" : "IG Institutional Statement Types",
-      "typeUiName" : null,
       "description" : "Institutional Statement Type Annotations as either constitutive or regulative",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "Constitutive Statement",
         "tag_description" : "Indicates constitutive statement"
       }, {
-        "tag_name" : "Fact/Observation",
-        "tag_description" : "Indicates a fact, observation, event or action instance as expressed in institutional statements (e.g., in conditional clauses)"
+        "tag_name" : "Observed Action",
+        "tag_description" : "Indicates an observed action (e.g., non-/compliance) by actors, but not facts or state of the physical environment more generally (which would be signaled as \"Observed Fact/State\"). While possibly linked to institutional statements, this form of statement is not institutional in its own right."
+      }, {
+        "tag_name" : "Observed Fact/State",
+        "tag_description" : "Indicates an observed fact or state of the environment, but not actors (which would be signaled as \"Observed Action\"). While possibly linked to institutional statements, this form of statement is not institutional in its own right."
       }, {
         "tag_name" : "Regulative Statement",
         "tag_description" : "Indicates a regulative statement"
@@ -326,18 +309,18 @@
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
-    "description" : "Indicates statement type as either constitutive or regulative.",
+    "description" : "Indicates statement type as constitutive or regulative, or as observation/fact (either environmental fact or action).",
     "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
     "link_type_name" : null,
     "link_type_role_feature_name" : null,
     "link_type_target_feature_name" : null,
-    "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"r\",\"value\":\"Regulative Statement\"},{\"keyCombo\":\"c\",\"value\":\"Constitutive Statement\"},{\"keyCombo\":\"F\",\"value\":\"Fact/Observation\"}]}"
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"r\",\"value\":\"Regulative Statement\"},{\"keyCombo\":\"c\",\"value\":\"Constitutive Statement\"},{\"keyCombo\":\"a\",\"value\":\"Observed Action\"},{\"keyCombo\":\"f\",\"value\":\"Observed Fact/State\"}]}"
   } ],
   "uiName" : "IG Institutional Statement",
   "type" : "span",
-  "description" : "Identifies and characterizes an institutional statement with respect to type, enforcement perspective, statement level. It further allows for the annotation of implied components.\r\n\r\nIG Profile Version: 0.2.9\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
+  "description" : "Identifies and characterizes an institutional statement with respect to type, enforcement perspective, statement level. It further allows for the annotation of implied components.\r\n\r\nIG-Inception Layers Version: 0.3.0\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,

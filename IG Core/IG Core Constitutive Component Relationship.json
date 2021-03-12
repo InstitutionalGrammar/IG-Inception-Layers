@@ -23,12 +23,8 @@
     "name" : "LogicalRelationship",
     "tag_set" : {
       "name" : "IG Component Relationships",
-      "typeUiName" : null,
       "description" : "Logical Component Relationships",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "AND",
         "tag_description" : "Indicates AND relationship, i.e., conjunction of components. The relationship is undirected."
@@ -133,12 +129,8 @@
     "name" : "AbstractvsConcrete",
     "tag_set" : {
       "name" : "IG Entity Characteristic",
-      "typeUiName" : null,
       "description" : "Indicates the nature of the entity characteristics",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "abstract",
         "tag_description" : "Signals an abstract entity (e.g., thought, institutional statement, etc.)"
@@ -187,12 +179,8 @@
     "name" : "Animacy",
     "tag_set" : {
       "name" : "IG Animacy",
-      "typeUiName" : null,
       "description" : "Tags indicating animacy",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "animate",
         "tag_description" : "Indicates animate entity"
@@ -222,12 +210,8 @@
     "name" : "Component",
     "tag_set" : {
       "name" : "IG Core Constitutive Components",
-      "typeUiName" : null,
       "description" : "IG Core Component Annotations for Constitutive Components",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "(Cac) Activation Condition",
         "tag_description" : "Conditions describe circumstance under which constitutive statements apply"
@@ -275,12 +259,8 @@
     "name" : "ConstitutiveFunction",
     "tag_set" : {
       "name" : "IG Constitutive Functions",
-      "typeUiName" : null,
       "description" : "Constitutive functions (as a specialization of institutional functions in the context of constitutive statements) characterize the functional semantics of constitutive function annotations with respect to the linkage of the constituted entity and, where existing, constituting properties, or contextual aspects.",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "(Conferral) Liability",
         "tag_description" : "References the conferral of a liability"
@@ -292,7 +272,7 @@
         "tag_description" : "References the conferral of a right"
       }, {
         "tag_name" : "(Conferral) Status",
-        "tag_description" : "Indicates conferral of status - this category is more general than other conferral characterizations"
+        "tag_description" : "Indicates conferral of status - this category is more general than other conferral characterizations, and may include status conferrals that do not come with power, rights, or liabilities."
       }, {
         "tag_name" : "(Definition) Definition",
         "tag_description" : "Defines an entity (e.g., actor, object, role, action, policy) intensionally (e.g., \"is\", \"counts as\") or extensionally (e.g., by what it does)."
@@ -310,7 +290,7 @@
         "tag_description" : "Signals that the constituted entity is composed of the elements described in constituting properties"
       }, {
         "tag_name" : "Information",
-        "tag_description" : "Indicates a purely informational statement without constitutive weight"
+        "tag_description" : "Indicates a purely informational statement without immediate constitutive weight"
       }, {
         "tag_name" : "Organization",
         "tag_description" : "Signals the embedding of the constituted entity in some structure (e.g., organization)"
@@ -343,13 +323,15 @@
     "name" : "Circumstance",
     "tag_set" : {
       "name" : "IG Context Taxonomy",
-      "typeUiName" : null,
       "description" : "Tags indicating context categories",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
+        "tag_name" : "(Method) Instrument",
+        "tag_description" : "Method in the form of an instrument - Reference to instrument (e.g., artifact, tool) mediating activity"
+      }, {
+        "tag_name" : "(Method) Means",
+        "tag_description" : "Method in the form of (non-instrumental) means - Reference to non-instrumental means or manners mediating activity"
+      }, {
         "tag_name" : "(Spatial) Direction",
         "tag_description" : "Direction - References to directions (e.g., towards), including intermediary locations (e.g., “via”)"
       }, {
@@ -377,9 +359,6 @@
         "tag_name" : "(Temporal) Time Frame",
         "tag_description" : "Time Frame - References to time frames"
       }, {
-        "tag_name" : "Cause/Reason",
-        "tag_description" : "Cause/Reason - References to underlying causes or reasons for action or constitution"
-      }, {
         "tag_name" : "Domain",
         "tag_description" : "Domain - Conditions/Constraints applying to a specified activity, topical, or other conceptual realm."
       }, {
@@ -388,12 +367,6 @@
       }, {
         "tag_name" : "Exception",
         "tag_description" : "Exception - Expression of exception to general rule (e.g., \"unless ...\"). It is a general category, applied if no other, more specific characterization holds."
-      }, {
-        "tag_name" : "Method",
-        "tag_description" : "Method - Reference to means (e.g., artifact, tool) or manners (e.g., handshake) mediating activity"
-      }, {
-        "tag_name" : "Outcome/Effect",
-        "tag_description" : "Outcome/Effect - Conditions/Constraints describing the outcome or effect of an aim by an actor involved in the action situation (e.g., \"Upon observing non-compliance, ...\")."
       }, {
         "tag_name" : "Procedural Order",
         "tag_description" : "Procedural Order - Context specifications associated with explicit or implied execution order, i.e., performing one action depends on completion of another"
@@ -423,12 +396,8 @@
     "name" : "Describespolicynotentity",
     "tag_set" : {
       "name" : "IG Constituted Policy vs Entity",
-      "typeUiName" : null,
       "description" : "Includes options for annotating constituted entities as self-referential with respect to the policy characterized, an external policy (i.e., a policy outside of the regulation or initiated in the context of the regulation), or an entity/object that is affected by the regulation, respectively.",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "Entity",
         "tag_description" : "Indicates that the constituted entity is an entity/object"
@@ -458,9 +427,52 @@
     "link_type_target_feature_name" : null,
     "traits" : "{\"multipleRows\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[{\"keyCombo\":\"e\",\"value\":\"Entity\"},{\"keyCombo\":\"p\",\"value\":\"Policy (self-referential)\"},{\"keyCombo\":\"x\",\"value\":\"Policy (external)\"}]}"
   }, {
+    "name" : "EmbedsLogicalCombination",
+    "tag_set" : {
+      "name" : "IG Component Relationships",
+      "description" : "Logical Component Relationships",
+      "language" : null,
+      "tags" : [ {
+        "tag_name" : "AND",
+        "tag_description" : "Indicates AND relationship, i.e., conjunction of components. The relationship is undirected."
+      }, {
+        "tag_name" : "AND NOT",
+        "tag_description" : "Describes a combination of statements, where the occurrence of the action specified in the first statement is combined with the non-occurrence of the action specified in the second statement. The relationship is directed; the target is the non-occurring action statement."
+      }, {
+        "tag_name" : "AND/OR",
+        "tag_description" : "Indicates AND/OR relationship (OR) in which both components may apply, or either one of those, i.e., an inclusive disjunction. The relationship is undirected."
+      }, {
+        "tag_name" : "Child-to-Parent Relationship (Target is Parent)",
+        "tag_description" : "Identifies a parent-child relationship between elements, with the parent being the element defined or composed, and the child its component or property.\r\nThis relationship type applies to various forms of annotations, but most notably to \r\n- component-level combinations (logical combinations of same components)\r\n- relationships between objects and properties, and\r\n- properties and sub-properties (Object-Property Hierarchy)."
+      }, {
+        "tag_name" : "NOR",
+        "tag_description" : "Describes a NEITHER-NOR (NOR) relationship of components, where the non-occurrence of the first component is combined with the non-occurrence of the second component of the same type. The relationship is undirected."
+      }, {
+        "tag_name" : "XOR",
+        "tag_description" : "Indicates an EITHER-OR (XOR) relationship, i.e., exclusive disjunction. The relationship is undirected."
+      } ],
+      "create_tag" : true
+    },
+    "uiName" : "Embeds Logical Combination",
+    "type" : "uima.cas.String",
+    "enabled" : true,
+    "visible" : true,
+    "include_in_hover" : false,
+    "required" : false,
+    "remember" : false,
+    "hideUnconstraintFeature" : false,
+    "description" : "Indicates that this component embeds a non-decomposed logical combination. This flag is intended to signal the need for downstream handling of this specific occurrence.",
+    "project_name" : "IG-Inception-Layer Development",
+    "multi_value_mode" : "NONE",
+    "link_mode" : "NONE",
+    "link_type_name" : null,
+    "link_type_role_feature_name" : null,
+    "link_type_target_feature_name" : null,
+    "traits" : "{\"multipleRows\":false,\"dynamicSize\":false,\"collapsedRows\":1,\"expandedRows\":1,\"keyBindings\":[]}"
+  }, {
     "name" : "EmbedsInstitutionalStatement",
     "tag_set" : null,
-    "uiName" : "Embeds Institutional Statement",
+    "uiName" : "Embeds Nested Statement",
     "type" : "uima.cas.Boolean",
     "enabled" : true,
     "visible" : false,
@@ -468,7 +480,7 @@
     "required" : false,
     "remember" : false,
     "hideUnconstraintFeature" : false,
-    "description" : "Indicates whether the component is or embeds an institutional statement in its own right.",
+    "description" : "Indicates whether the component is or embeds an institutional statement or observational statement in its own right. This is complementary to the \"Nested Statement\" flag in the Institutional Statement layer once the nested part is annotated.",
     "project_name" : "IG-Inception-Layer Development",
     "multi_value_mode" : "NONE",
     "link_mode" : "NONE",
@@ -518,12 +530,8 @@
     "name" : "PolicyRelationship",
     "tag_set" : {
       "name" : "IG Policy Relationships",
-      "typeUiName" : null,
       "description" : "Characterize forms of policy relationships based on directionality",
       "language" : null,
-      "type" : null,
-      "type_name" : null,
-      "type_description" : null,
       "tags" : [ {
         "tag_name" : "Policy in constituting property amends",
         "tag_description" : "Policy of concern is amended by policy referred to in constituting property"
@@ -570,7 +578,7 @@
   } ],
   "uiName" : "IG Core Constitutive Syntax",
   "type" : "span",
-  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG Profile Version: 0.2.9\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
+  "description" : "Identifies institutional statement components for constitutive statements\r\n\r\nIG-Inception Layers Version: 0.3.0\r\nFor all versions, see https://github.com/InstitutionalGrammar/IG-Inception-Layers/releases\r\nMaintainer: C. Frantz",
   "enabled" : true,
   "built_in" : false,
   "readonly" : false,
