@@ -6,7 +6,12 @@ Institutional Grammar Layers for Inception Annotation Platform
 
 ## Content
 
-This repository contains [Inception](https://inception-project.github.io/) Annotation Layers for the IG Core specification of the Institutional Grammar 2.0 ([Article](https://doi.org/10.1111/padm.12719), [Codebook](https://arxiv.org/abs/2008.08937)), alongside selected additional features. 
+This repository contains [Inception](https://inception-project.github.io/) Annotation Layers for the IG Core specification of the Institutional Grammar 2.0 (IG 2.0). 
+
+The principles underlying the IG 2.0 are conceptually discussed in the following article, and operational coding guidelines are provided in the supplementary codebook.
+
+* Conceptual basis: [Frantz, C.K., Siddiki, S.: Institutional Grammar 2.0: A specification for encoding and analyzing institutional design. Public Administration 2021; 1–26. https://doi.org/10.1111/padm.12719](https://doi.org/10.1111/padm.12719)
+* Coding guidelines: [Frantz, C.K., Siddiki, S.N.: Institutional Grammar 2.0 Codebook, https://arxiv.org/abs/2008.08937](https://arxiv.org/abs/2008.08937)
 
 This Readme file provides 
 * instructions for download and import of the layers into Inception, 
@@ -87,7 +92,7 @@ Christopher Frantz (christopher.frantz@ntnu.no)
 ## Version History
  
  * IG-Inception v0.3.0 (12/03/2021, C. Frantz)
-   * Aligned Context characterization with Institutional Grammar 2.0 article (https://doi.org/10.1111/padm.12719)
+   * Aligned Context characterization with [Institutional Grammar 2.0 article](https://doi.org/10.1111/padm.12719)
    * Stratified observation statement into Observation of Fact (environment-centric) and Action (actor-centric)
    * Added explicit flag into Institutional Statement Layer to indicate nested nature (previously only via component embedding statement)
    * Minor revisisions of consistency in naming of annotations across regulative and constitutive layers
