@@ -6,7 +6,7 @@ Institutional Grammar Layers for Inception Annotation Platform
 
 ## Content
 
-This repository contains [Inception](https://inception-project.github.io/) Annotation Layers for the Institutional Grammar 2.0 (IG 2.0). 
+This repository contains [Inception](https://inception-project.github.io/) Annotation Layers for annotating text according to the Institutional Grammar 2.0 (IG 2.0). 
 
 The principles underlying the IG 2.0 are conceptually discussed in the following article, and operational coding guidelines are provided in the supplementary codebook.
 
