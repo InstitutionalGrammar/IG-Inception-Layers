@@ -2,7 +2,9 @@
 
 Institutional Grammar Layers for Inception Annotation Platform
 
-**Note: This project is under development and currently undergoing evaluation.**
+**Note: This project is open for feedback based on users of Inception. Ideally, please use the issue tracker for this purpose.**
+
+**Update:** Please note there there is now a purpose-built tool called [**IG Parser**](https://newinstitutionalgrammar.org/ig-parser.html) to support the encoding of institutional statements. 
 
 ## Content
 
